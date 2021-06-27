@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
 
@@ -11,12 +11,17 @@ import { EvaluationsService } from './services/evaluations.service';
 import { EvaluationsRoutingModule } from './evaluations-routing.module';
 import { SideNavComponent } from './tests/components/side-nav/side-nav.component';
 import { ToolbarComponent } from './tests/components/toolbar/toolbar.component';
+import { DisciplinasTableComponent } from './tests/components/disciplinas-table/disciplinas-table.component';
+import { MatTableModule } from '@angular/material/table';
+import { MatPaginatorModule } from '@angular/material/paginator';
+import { MatSortModule } from '@angular/material/sort';
 
 @NgModule({
   declarations: [
     TestsComponent,
     SideNavComponent,
     ToolbarComponent,
+    DisciplinasTableComponent,
   ],
   imports: [
     EvaluationsRoutingModule,
@@ -25,9 +30,15 @@ import { ToolbarComponent } from './tests/components/toolbar/toolbar.component';
     MatToolbarModule,
     MatSidenavModule,
     MatIconModule,
+    MatTableModule,
+    MatPaginatorModule,
+    MatSortModule,
   ],
   providers: [
     EvaluationsService,
+  ],
+  schemas: [
+    CUSTOM_ELEMENTS_SCHEMA
   ]
 })
 export class EvaluationsModule { }
