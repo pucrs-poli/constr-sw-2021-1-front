@@ -3,6 +3,7 @@ import { MatPaginator } from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
 import { MatTable } from '@angular/material/table';
 import { DisciplinasTableDataSource, DisciplinasTableItem } from './disciplinas-table-datasource';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-disciplinas-table',
@@ -18,6 +19,10 @@ export class DisciplinasTableComponent implements AfterViewInit, OnInit {
   /** Columns displayed in the table. Columns IDs can be added, removed, or reordered. */
   displayedColumns = ['name', 'numberTests'];
 
+  constructor(
+    private router: Router,
+  ) {}
+
   ngOnInit() {
     this.dataSource = new DisciplinasTableDataSource();
   }
@@ -32,5 +37,6 @@ export class DisciplinasTableComponent implements AfterViewInit, OnInit {
    // let route = '/contacts/edit-contact';
    // this.router.navigate([route], { queryParams: { id: contact.id } });
    console.log("awuyehasuehas: ", item)
+   this.router.navigateByUrl("/test", { state: { item } })
   }
 }
