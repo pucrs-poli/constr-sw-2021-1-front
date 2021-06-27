@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { TestModel } from '../models/test.model';
 
 @Component({
   selector: 'app-test',
@@ -7,12 +8,16 @@ import { Router } from '@angular/router';
   styleUrls: ['./test.component.css']
 })
 export class TestComponent implements OnInit {
-
+  
+  @Input() tests: TestModel[];
+  testName: string = '';
+  teste: any;
+  
   constructor(private router: Router) {
-    console.log(this.router.getCurrentNavigation().extras.state.test); // should log out 'bar'
+    this.teste = this.router.getCurrentNavigation().extras.state.test;
   }
 
-  ngOnInit(): void {
+  ngOnInit() {
+    this.testName = this.teste.name;
   }
-
 }

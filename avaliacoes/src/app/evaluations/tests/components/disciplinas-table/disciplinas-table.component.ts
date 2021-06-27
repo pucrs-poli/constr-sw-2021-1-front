@@ -4,6 +4,7 @@ import { MatSort } from '@angular/material/sort';
 import { MatTable } from '@angular/material/table';
 import { DisciplinasTableDataSource, DisciplinasTableItem } from './disciplinas-table-datasource';
 import { Router } from '@angular/router';
+import { TestModel } from 'src/app/evaluations/models/test.model';
 
 @Component({
   selector: 'app-disciplinas-table',
@@ -34,7 +35,6 @@ export class DisciplinasTableComponent implements AfterViewInit, OnInit {
   }
 
   onClickItem(item) {
-   // console.log("item: ", item)
-   this.router.navigateByUrl("/test", { state: { test: item } })
+    this.router.navigateByUrl("/test", { state: { test: item } })
   }
 }

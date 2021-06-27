@@ -14,13 +14,13 @@ export class TestsComponent implements OnInit {
   constructor(protected evaluationService: EvaluationsService) { }
 
   ngOnInit() {
-    /* this.evaluationService.getAllTests().subscribe(
+    this.evaluationService.getAllTests().subscribe(
       (tests: TestModel[]) => this.tests = tests
-    ) */
-  
-    this.evaluationService.getApi().subscribe(
-      (value) => console.log(value),
     )
+  
+    /* this.evaluationService.getApi().subscribe(
+      (value) => console.log(value),
+    ) */
   }
 
 }

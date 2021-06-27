@@ -1,0 +1,48 @@
+.full-width-table {
+    width: 730px;
+}
+
+table {
+    width: 100%;
+}
+
+.disciplinas-collum-size-teste {
+    width: 126px;
+    text-align: center;
+}
+
+.disciplinas-table-title {
+    font-size: 18px;
+    color: gray;
+    border-bottom-width: 0px;
+}
+
+.disciplinas-table-line {
+    height: 70px;
+}
+
+.disciplinas-table-line:hover {
+    font-weight: bold;
+    cursor: pointer;
+}
+
+p {
+    font-size: 14px;
+    margin: 0px;
+    color: #6D8A96
+}
+
+p:first-child {
+    font-size: 16px;
+    padding: 4px 0px;
+    color: black
+}
+
+.mat-icon-color {
+    color: #5D707F;
+}
+
+td.mat-cell:last-of-type,
+td.mat-footer-cell {
+    padding-right: 0px;
+}

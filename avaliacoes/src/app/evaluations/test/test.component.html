@@ -1,1 +1,12 @@
-<p>test works!</p>
+<div>
+    <div class="test-titulo-container">
+        <mat-icon aria-hidden="false" aria-label="Example home icon" class="test-icone">
+            auto_stories
+        </mat-icon>
+        <div class="test-titulo">Testes - {{ testName }}</div>
+    </div>
+    <div class="test-table-container">
+        <app-test-table></app-test-table>
+    </div>
+    <app-primary-button [text]="'CRIAR'"></app-primary-button>
+</div>

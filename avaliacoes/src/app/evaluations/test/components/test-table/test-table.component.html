@@ -1,0 +1,25 @@
+<div class="mat-elevation-z8 full-width-table">
+    <table mat-table [dataSource]="dataSource" class="mg-b" aria-label="Elements">
+        <ng-container matColumnDef="position">
+            <th mat-header-cell *matHeaderCellDef class="disciplinas-table-title">Tests </th>
+            <td mat-cell *matCellDef="let element">
+                <div>
+                    <p>oi</p>
+                    <p>oi</p>
+                    <p>Média: {}</p>
+                </div>
+            </td>
+        </ng-container>
+
+        <ng-container matColumnDef="name">
+            <th mat-header-cell *matHeaderCellDef class="disciplinas-collum-size-teste disciplinas-table-title"> </th>
+            <td mat-cell *matCellDef="let element" class="disciplinas-collum-size-teste">
+                <mat-icon class="mat-icon-color mg-r">auto_stories</mat-icon>
+                <mat-icon class="mat-icon-color">insert_drive_file</mat-icon>
+            </td>
+        </ng-container>
+
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;" class="disciplinas-table-line"></tr>
+    </table>
+</div>
