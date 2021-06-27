@@ -122,5 +122,8 @@
       }
     }
   },
-  "defaultProject": "avaliacoes"
+  "defaultProject": "avaliacoes",
+  "cli": {
+    "analytics": "2a91aa6a-7f9d-4dd3-a0a7-b446c470c7b5"
+  }
 }
