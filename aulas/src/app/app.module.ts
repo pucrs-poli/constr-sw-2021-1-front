@@ -16,12 +16,14 @@ import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatListModule } from '@angular/material/list';
 import { MatSelectModule } from '@angular/material/select';
+import { CadastrarAulaComponent } from './cadastrar-aula/cadastrar-aula.component';
 
 @NgModule({
     declarations: [
         AppComponent,
         ListagemAulasComponent,
-        EditarAulaComponent
+        EditarAulaComponent,
+        CadastrarAulaComponent
     ],
     imports: [
         BrowserModule,
