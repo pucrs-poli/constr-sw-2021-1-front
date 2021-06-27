@@ -34,9 +34,7 @@ export class DisciplinasTableComponent implements AfterViewInit, OnInit {
   }
 
   onClickItem(item) {
-   // let route = '/contacts/edit-contact';
-   // this.router.navigate([route], { queryParams: { id: contact.id } });
-   console.log("awuyehasuehas: ", item)
-   this.router.navigateByUrl("/test", { state: { item } })
+   // console.log("item: ", item)
+   this.router.navigateByUrl("/test", { state: { test: item } })
   }
 }

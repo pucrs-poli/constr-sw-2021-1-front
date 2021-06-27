@@ -15,6 +15,7 @@ import { DisciplinasTableComponent } from './tests/components/disciplinas-table/
 import { MatTableModule } from '@angular/material/table';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatSortModule } from '@angular/material/sort';
+import { TestComponent } from './test/test.component';
 
 @NgModule({
   declarations: [
@@ -22,6 +23,7 @@ import { MatSortModule } from '@angular/material/sort';
     SideNavComponent,
     ToolbarComponent,
     DisciplinasTableComponent,
+    TestComponent,
   ],
   imports: [
     EvaluationsRoutingModule,
