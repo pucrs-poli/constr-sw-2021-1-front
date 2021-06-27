@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="">
+  </head>
+  <body>
+    <div>
+      <p>
+        <mat-toolbar class="example-spacer">
+          <button
+            mat-icon-button
+            class="example-icon"
+            aria-label="Example icon-button with menu icon"
+          >
+            <mat-icon>menu</mat-icon>
+          </button>
+          <span class="example-spacer"></span>
+          <button
+            mat-icon-button
+            class="example-icon favorite-icon"
+            aria-label="Example icon-button with heart icon"
+          >
+            <mat-icon>favorite</mat-icon>
+          </button>
+          <button
+            mat-icon-button
+            class="example-icon"
+            aria-label="Example icon-button with share icon"
+          >
+            <mat-icon>share</mat-icon>
+          </button>
+        </mat-toolbar>
+      </p>
+
+      <div class="meio">
+
+        <div class="wrapper">
+          <div>
+            <h1 class="title">Editar Recurso</h1>
+          </div>
+          <div class="posicaodiv">
+            <form class="example-form">
+              <mat-form-field class="example-full-width" appearance="fill">
+                <mat-label>ID</mat-label>
+                <input matInput />
+              </mat-form-field>
+            </form>
+
+            <form class="example-form">
+              <mat-form-field class="example-full-width" appearance="fill">
+                <mat-label>Nome</mat-label>
+                <input matInput />
+              </mat-form-field>
+            </form>
+
+            <form class="example-form">
+              <mat-form-field class="example-full-width" appearance="fill">
+                <mat-label>Tipo</mat-label>
+                <input matInput />
+              </mat-form-field>
+            </form>
+
+    <!--<mat-form-field appearance="fill">-->
+      <!--<<mat-label>Tipo</mat-label>>-->
+        <!--<mat-select>-->
+          <!--<mat-option *ngFor="let tipo of tipos" [value]="tipo.nome">-->
+          <!--{{tipo.descricao}}-->
+          <!--</mat-option>-->
+      <!--</mat-select>-->
+    <!--</mat-form-field>-->
+
+            <form class="example-form">
+              <mat-form-field class="example-full-width" appearance="fill">
+                <mat-label>Descrição</mat-label>
+                <input matInput />
+              </mat-form-field>
+            </form>
+          </div>
+
+          <section>
+            <button>Cancelar</button>
+            <button>Salvar</button>
+          </section>
+        </div>
+      </div>
+    </div>
+
+    <router-outlet></router-outlet>
+
+  </body>
+</html>
