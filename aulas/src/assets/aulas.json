@@ -1,0 +1,110 @@
+[
+    {
+        "nomeAula": "Programacao orientada a objetos",
+        "atividades": [
+            {
+                "nomeAtividade": "Prova"
+            },
+            {
+                "nomeAtividade": "T1"
+            },
+            {
+                "nomeAtividade": "T2"
+            }
+        ],
+        "cursos": [
+            {
+                "nomeCurso": "Engenharia de software"
+            },
+            {
+                "nomeCurso": "Ciencias da computacao"
+            },
+            {
+                "nomeCurso": "Sistemas de informacao"
+            }
+        ],
+        "sala": "101",
+        "idAula": 4
+    },
+    {
+        "nomeAula": "Software experimental",
+        "atividades": [
+            {
+                "nomeAtividade": "Prova"
+            },
+            {
+                "nomeAtividade": "T1"
+            },
+            {
+                "nomeAtividade": "T2"
+            }
+        ],
+        "cursos": [
+            {
+                "nomeCurso": "Engenharia de software"
+            },
+            {
+                "nomeCurso": "Ciencias da computacao"
+            },
+            {
+                "nomeCurso": "Sistemas de informacao"
+            }
+        ],
+        "sala": "102",
+        "idAula": 1
+    },
+    {
+        "nomeAula": "Construcao de software",
+        "atividades": [
+            {
+                "nomeAtividade": "Prova"
+            },
+            {
+                "nomeAtividade": "T1"
+            },
+            {
+                "nomeAtividade": "T2"
+            }
+        ],
+        "cursos": [
+            {
+                "nomeCurso": "Engenharia de software"
+            },
+            {
+                "nomeCurso": "Ciencias da computacao"
+            },
+            {
+                "nomeCurso": "Sistemas de informacao"
+            }
+        ],
+        "sala": "103",
+        "idAula": 2
+    },
+    {
+        "nomeAula": "Manutencao de software",
+        "atividades": [
+            {
+                "nomeAtividade": "Prova"
+            },
+            {
+                "nomeAtividade": "T1"
+            },
+            {
+                "nomeAtividade": "T2"
+            }
+        ],
+        "cursos": [
+            {
+                "nomeCurso": "Engenharia de software"
+            },
+            {
+                "nomeCurso": "Ciencias da computacao"
+            },
+            {
+                "nomeCurso": "Sistemas de informacao"
+            }
+        ],
+        "sala": "104",
+        "idAula": 3
+    }
+]

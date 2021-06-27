@@ -1,0 +1,36 @@
+.container {
+    width: 50%;
+    margin-left: 25%;
+}
+
+.logo {
+    width: 36px; 
+    height: 36px;
+}
+
+.titulo {
+    font-size: 34px; 
+    margin-left: 10px;
+    margin-top: 10px;
+}
+
+.subtitulo {
+    font-size: 25px; 
+    color: #5d707f;
+    margin-left: 6%;
+}
+
+.nomeAula {
+    font-size: 16px;
+    color: black;
+}
+
+.informacoes {
+    font-size: 14px;
+    color: #6d8a96;
+    display: flex;
+}
+
+img {
+    margin-left: 40px;
+}

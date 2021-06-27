@@ -1,0 +1,37 @@
+<div class="container">
+    <div style="display: flex; align-items: center; justify-content: space-between;">
+        <div style="display: flex; flex-direction: row;">
+            <img src="../../assets/livro.png" class="logo">
+
+            <p class="titulo">
+                Aulas
+            </p>
+        </div>
+    </div>
+
+    <p class="subtitulo">
+        Cadastrar aula
+    </p>
+
+    <form style="margin-left: 6%; flex-direction: column; display: flex; width: 340px;">
+        <mat-form-field appearance="fill">
+            <input matInput placeholder="Nome" type="text" />
+        </mat-form-field>
+
+        <mat-form-field appearance="fill">
+            <input matInput placeholder="Course" />
+        </mat-form-field>
+        
+        <mat-form-field appearance="fill">
+            <mat-select multiple>
+                <mat-option *ngFor="let atividade of atividadesLista" [value]="atividade">
+                    {{atividade.nomeAtividade}}
+                </mat-option>
+            </mat-select>
+        </mat-form-field>
+        
+        <mat-form-field appearance="fill">
+            <input matInput placeholder="Room" />
+        </mat-form-field>
+    </form>
+</div>

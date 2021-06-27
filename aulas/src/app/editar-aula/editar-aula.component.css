@@ -1,0 +1,23 @@
+.container {
+    width: 50%;
+    margin-left: 25%;
+}
+
+.logo {
+    width: 36px; 
+    height: 36px;
+}
+
+.titulo {
+    font-size: 34px; 
+    margin-left: 10px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.subtitulo {
+    font-size: 25px; 
+    color: #5d707f;
+    margin-left: 6%;
+    margin-bottom: 50px;
+}

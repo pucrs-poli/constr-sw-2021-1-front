@@ -1,0 +1,61 @@
+<div class="container">
+    <div style="display: flex; align-items: center; justify-content: space-between;">
+        <div style="display: flex; flex-direction: row;">
+            <img src="../../assets/livro.png" class="logo">
+
+            <p class="titulo">
+                Aulas
+            </p>
+        </div>
+
+        <mat-form-field appearance="fill">
+            <input matInput placeholder="ID da aula" style="width: 336px;" />
+        </mat-form-field>
+    </div>
+
+    <p class="subtitulo">
+        Lista de aulas
+    </p>
+
+    <ul>
+        <li *ngFor="let aula of aulas" style="list-style-type: none; margin-bottom: 20px;">
+            <div style="display: flex; align-items: center;">
+                <div>
+                    <span class="nomeAula">{{ aula.nomeAula }}</span>
+                    <br>
+
+                    <div class="informacoes">
+                        Activities: <span *ngFor="let atividade of aula.atividades; let isLast = last">{{
+                            atividade.nomeAtividade }}{{ isLast ? '' : ', ' }}</span>
+                    </div>
+
+                    <div class="informacoes">
+                        Courses: <span *ngFor="let atividade of aula.cursos; let isLast = last">{{ atividade.nomeCurso
+                            }}{{
+                            isLast ? '' : ', ' }}</span>
+                    </div>
+
+                    <div class="informacoes">
+                        Room: {{ aula.sala }}
+                    </div>
+                </div>
+
+                <a href="/editar-aula">
+                    <img src="assets/editar.png">
+                </a>
+
+                <a href="/listagem-aulas">
+                    <img src="assets/excluir.png">
+                </a>
+
+            </div>
+        </li>
+    </ul>
+
+
+
+    <!-- <mat-selection-list #aulas [multiple]="false">
+        <mat-list-option *ngFor="let aula of aulas">
+        </mat-list-option>
+    </mat-selection-list> -->
+</div>
