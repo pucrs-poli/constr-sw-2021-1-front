@@ -6,7 +6,7 @@
         <div class="test-titulo">Testes - {{ testName }}</div>
     </div>
     <div class="test-table-container">
-        <app-test-table></app-test-table>
+        <app-test-table [tests]="tests"></app-test-table>
     </div>
     <app-primary-button [text]="'CRIAR'"></app-primary-button>
 </div>

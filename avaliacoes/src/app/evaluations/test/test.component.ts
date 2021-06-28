@@ -9,15 +9,14 @@ import { TestModel } from '../models/test.model';
 })
 export class TestComponent implements OnInit {
   
-  @Input() tests: TestModel[];
-  testName: string = '';
-  teste: any;
+  testName: string;
+  tests: TestModel[];
   
   constructor(private router: Router) {
-    this.teste = this.router.getCurrentNavigation().extras.state.test;
+    this.tests = this.router.getCurrentNavigation().extras.state.test;
+    this.testName = this.router.getCurrentNavigation().extras.state.subject;
   }
 
   ngOnInit() {
-    this.testName = this.teste.name;
   }
 }

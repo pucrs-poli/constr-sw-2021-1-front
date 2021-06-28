@@ -1,8 +1,4 @@
-import { AfterViewInit, Component, OnInit, ViewChild } from '@angular/core';
-import { MatPaginator } from '@angular/material/paginator';
-import { MatSort } from '@angular/material/sort';
-import { MatTable } from '@angular/material/table';
-import { DisciplinasTableDataSource, DisciplinasTableItem } from './disciplinas-table-datasource';
+import { Component, Input, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { TestModel } from 'src/app/evaluations/models/test.model';
 
@@ -11,13 +7,11 @@ import { TestModel } from 'src/app/evaluations/models/test.model';
   templateUrl: './disciplinas-table.component.html',
   styleUrls: ['./disciplinas-table.component.css']
 })
-export class DisciplinasTableComponent implements AfterViewInit, OnInit {
-  @ViewChild(MatPaginator) paginator: MatPaginator;
-  @ViewChild(MatSort) sort: MatSort;
-  @ViewChild(MatTable) table: MatTable<DisciplinasTableItem>;
-  dataSource: DisciplinasTableDataSource;
+export class DisciplinasTableComponent implements OnInit {
+  @Input() tests: TestModel[];
+  subjects: string[];
+  tam: number;
 
-  /** Columns displayed in the table. Columns IDs can be added, removed, or reordered. */
   displayedColumns = ['name', 'numberTests'];
 
   constructor(
@@ -25,16 +19,12 @@ export class DisciplinasTableComponent implements AfterViewInit, OnInit {
   ) {}
 
   ngOnInit() {
-    this.dataSource = new DisciplinasTableDataSource();
+    this.subjects = this.tests[1].subjects;
+    this.tam = this.tests[1].subjects.length;
   }
 
-  ngAfterViewInit() {
-    this.dataSource.sort = this.sort;
-    this.dataSource.paginator = this.paginator;
-    this.table.dataSource = this.dataSource;
-  }
-
-  onClickItem(item) {
-    this.router.navigateByUrl("/test", { state: { test: item } })
+  onClickItem(subject: string) {
+    const tests = this.tests.filter( e => e.subjects.includes(subject));
+    this.router.navigateByUrl("/test", { state: { test: tests, subject: subject } })
   }
 }

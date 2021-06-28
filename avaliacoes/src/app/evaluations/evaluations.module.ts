@@ -17,6 +17,7 @@ import { EvaluationsRoutingModule } from './evaluations-routing.module';
 import { SharedModule } from '../shared/shared.module';
 import { TestComponent } from './test/test.component';
 import { TestTableComponent } from './test/components/test-table/test-table.component';
+import { ResultsComponent } from './results/results.component';
 
 @NgModule({
   declarations: [
@@ -24,6 +25,7 @@ import { TestTableComponent } from './test/components/test-table/test-table.comp
     DisciplinasTableComponent,
     TestComponent,
     TestTableComponent,
+    ResultsComponent,
   ],
   imports: [
     EvaluationsRoutingModule,
