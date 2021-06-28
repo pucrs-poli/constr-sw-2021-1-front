@@ -1,4 +1,6 @@
 import { Component, Input, OnInit, ViewChild } from '@angular/core';
+import { Router } from '@angular/router';
+import { ResultModel } from 'src/app/evaluations/models/result.model';
 
 import { TestModel } from 'src/app/evaluations/models/test.model';
 
@@ -13,6 +15,13 @@ export class TestTableComponent implements OnInit {
 
   displayedColumns: string[] = ['Tests', 'Buttons'];
 
+  constructor(protected router: Router){
+  }
+
   ngOnInit() {
+  }
+
+  onClickResults(tests: TestModel){
+    this.router.navigateByUrl("/results", { state: { results: tests.results, name: tests.id}})
   }
 }

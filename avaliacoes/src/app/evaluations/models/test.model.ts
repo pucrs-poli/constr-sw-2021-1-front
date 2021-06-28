@@ -1,4 +1,5 @@
 import { QuestionModel } from "./question.model";
+import { ResultModel } from "./result.model";
 
 export class TestModel{
     id?: string
@@ -6,4 +7,5 @@ export class TestModel{
     weight?: number;
     duration?: number;
     questions?: QuestionModel[];
+    results?: ResultModel[];
 }

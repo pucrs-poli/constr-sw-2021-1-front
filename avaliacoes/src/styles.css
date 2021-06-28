@@ -35,3 +35,11 @@ button {
 .background {
     background: #EEF1EF;
 }
+
+.full-width-table {
+    width: 730px;
+}
+
+table {
+    width: 100%;
+}
