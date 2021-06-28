@@ -20,9 +20,9 @@
     <td mat-cell *matCellDef="let element"> {{element.type}} </td>
   </ng-container>
 
-  <ng-container matColumnDef="Ações">
-    <th mat-header-cell> Symbol </th>
-    <td mat-cell> Icon </td>
+  <ng-container matColumnDef="actions">
+    <th mat-header-cell *matHeaderCellDef> Delete </th>
+      <td mat-cell *matCellDef="let element"><i class="material-icons" (click)="delete()">delete</i>
   </ng-container>
 
   <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
