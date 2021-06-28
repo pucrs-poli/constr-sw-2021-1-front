@@ -24,9 +24,15 @@ export class ResourceTableComponent implements OnInit {
   dataSource = ELEMENT_DATA;
   readonly apiURL : string;
 
+  buttonClick(){
+    alert('Botão clicado!');
+  }
+
   constructor(private http: HttpClient) {
     this.apiURL = 'http://ec2-54-232-199-57.sa-east-1.compute.amazonaws.com';
   }
+  
+
 
   // Getting CORS error from API
   ngOnInit(): void {
