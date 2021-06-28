@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import {RouterModule, Routes} from '@angular/router';
 import { MatTableModule } from '@angular/material/table';
 import { MatTabsModule } from '@angular/material/tabs';
 import { MatButtonModule } from '@angular/material/button';
@@ -13,16 +14,28 @@ import { ResourceTableComponent } from './components/resource-table/resource-tab
 import { ResourceTabsComponent } from './components/resource-tabs/resource-tabs.component';
 import { ReservationTableComponent } from './components/reservation-table/reservation-table.component';
 import { ResourcesPageComponent } from './pages/resources-page/resources-page.component';
+import { HomePageComponent } from './pages/home-page/home-page.component';
 
+
+const appRoutes: Routes = [
+  { path: '', component: HomePageComponent },
+  { path: 'recursos', component: ResourcesPageComponent },
+  { path: '**', component: HomePageComponent },
+];
 @NgModule({
   declarations: [
     AppComponent,
     ResourceTableComponent,
     ResourceTabsComponent,
     ReservationTableComponent,
-    ResourcesPageComponent
+    ResourcesPageComponent,
+    HomePageComponent
   ],
   imports: [
+    RouterModule.forRoot(
+      appRoutes,
+      {enableTracing: true}
+    ),
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
