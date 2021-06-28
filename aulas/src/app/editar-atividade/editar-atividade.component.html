@@ -1,0 +1,52 @@
+<div class="container">
+    <div style="display: flex; align-items: center; justify-content: space-between;">
+        <div style="display: flex; flex-direction: row;">
+            <img src="../../assets/livro.png" class="logo">
+
+            <p class="titulo">
+                Atividades
+            </p>
+        </div>
+    </div>
+
+    <p class="subtitulo">
+        Cadastrar atividade
+    </p>
+
+    <form [formGroup]="atividadeForm" style="margin-left: 6%; flex-direction: column; display: flex; width: 340px;">
+        <mat-form-field appearance="fill">
+            <mat-label>Lesson ID</mat-label>
+            <input matInput formControlName='lessonID'>
+        </mat-form-field>
+
+        <mat-form-field appearance="fill">
+            <mat-label>Name</mat-label>
+            <input matInput formControlName='name'>
+        </mat-form-field>
+
+        <mat-form-field appearance="fill">
+            <mat-label>Description</mat-label>
+            <input matInput type="text" formControlName='description'>
+        </mat-form-field>
+
+        <mat-form-field appearance="fill">
+            <mat-label>Grade</mat-label>
+            <input matInput type="text" formControlName='grade'>
+        </mat-form-field>
+
+        <mat-form-field appearance="fill">
+            <mat-label>Final Date</mat-label>
+            <input matInput type="text" formControlName='finalDate'>
+        </mat-form-field>
+
+        <mat-form-field appearance="fill">
+            <mat-label>Status</mat-label>
+            <input matInput type="text" formControlName='status'>
+        </mat-form-field>
+
+    </form>
+    <div>
+        <button class="botao" [routerLink]="['/listagem-aulas']"><mat-icon>keyboard_arrow_left</mat-icon>Voltar</button>
+    </div>
+</div>
+

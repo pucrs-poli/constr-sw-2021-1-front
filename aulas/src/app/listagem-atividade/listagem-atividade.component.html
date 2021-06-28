@@ -4,44 +4,45 @@
             <img src="../../assets/livro.png" class="logo">
 
             <p class="titulo">
-                Aulas
+                Atividades
             </p>
         </div>
 
         <mat-form-field appearance="fill">
-            <input matInput placeholder="ID da aula" style="width: 336px;" />
+            <input matInput placeholder="ID da atividade" style="width: 336px;" />
         </mat-form-field>
     </div>
 
     <p class="subtitulo">
-        Lista de aulas
+        Lista de atividades
     </p>
 
     <ul>
-        <li *ngFor="let aula of aulas" style="list-style-type: none; margin-bottom: 20px;">
+        <li *ngFor="let atividade of atividades" style="list-style-type: none; margin-bottom: 20px;">
             <div style="display: flex; align-items: center;">
                 <div>
-                    <span class="nomeAula">{{ aula.nomeAula }}</span>
+                    <span class="nomeAula">{{ atividade.nomeAtividade }}</span> - <span class="nomeAula">{{
+                        atividade.idDaAula }}</span>
+
                     <br>
 
                     <div class="informacoes">
-                        Activities: <span *ngFor="let atividade of aula.atividades; let isLast = last">{{
-                            atividade.nomeAtividade }}{{ isLast ? '' : ', ' }}</span>
+                        Description: <span>{{atividade.descricao}}</span>
                     </div>
 
                     <div class="informacoes">
-                        Courses: <span *ngFor="let atividade of aula.cursos; let isLast = last">{{ atividade.nomeCurso
-                            }}{{
-                            isLast ? '' : ', ' }}</span>
+                        Final Date: <span>{{atividade.finalDate}}</span>
                     </div>
 
                     <div class="informacoes">
-                        Room: {{ aula.sala }}
+                        Grade: <span>{{atividade.grade}}</span> - Status: <span>{{atividade.status}}</span>
                     </div>
+
+
                 </div>
 
-                <a [routerLink]="['/editar-aula']"
-                [queryParams]="{nomeAula: aula.nomeAula, atividades: [aula.atividades[0].nomeAtividade, aula.atividades[1].nomeAtividade, aula.atividades[2].nomeAtividade], cursos: [aula.cursos[0].nomeCurso, aula.cursos[1].nomeCurso, aula.cursos[2].nomeCurso], sala: aula.sala}">
+                <a [routerLink]="['/editar-atividade']"
+                [queryParams]="{lessonID: atividade.idDaAula, name:atividade.nomeAtividade, description: atividade.descricao, grade: atividade.grade, finalDate: atividade.finalDate, status: atividade.status}">
                 <img src="assets/editar.png">
                 </a>
 

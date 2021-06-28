@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup } from '@angular/forms';
 
 @Component({
     selector: 'app-cadastrar-aula',
@@ -6,6 +7,12 @@ import { Component, OnInit } from '@angular/core';
     styleUrls: ['./cadastrar-aula.component.css']
 })
 export class CadastrarAulaComponent implements OnInit {
+    aulaForm: FormGroup | any;
+    valueName: any;
+    valueCourse: any;
+    valueActivity: any;
+    valueRoom: any;
+    
     atividadesLista = [
         {
             "nomeAtividade": "Prova"
@@ -18,7 +25,14 @@ export class CadastrarAulaComponent implements OnInit {
         }
     ];
 
-    constructor() { }
+    constructor(private formBuilder: FormBuilder) {
+        this.aulaForm = this.formBuilder.group({
+            nome: [''],
+            curso: [''],
+            atividade: [''],
+            sala: [''],
+          });
+     }
 
     ngOnInit(): void {
     }

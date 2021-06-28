@@ -17,13 +17,22 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatListModule } from '@angular/material/list';
 import { MatSelectModule } from '@angular/material/select';
 import { CadastrarAulaComponent } from './cadastrar-aula/cadastrar-aula.component';
+import { CadastrarAtividadeComponent } from './cadastrar-atividade/cadastrar-atividade.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule } from '@angular/forms';
+import { ListagemAtividadeComponent } from './listagem-atividade/listagem-atividade.component';
+import { EditarAtividadeComponent } from './editar-atividade/editar-atividade.component';
+
 
 @NgModule({
     declarations: [
         AppComponent,
         ListagemAulasComponent,
         EditarAulaComponent,
-        CadastrarAulaComponent
+        CadastrarAulaComponent,
+        CadastrarAtividadeComponent,
+        ListagemAtividadeComponent,
+        EditarAtividadeComponent
     ],
     imports: [
         BrowserModule,
@@ -35,7 +44,9 @@ import { CadastrarAulaComponent } from './cadastrar-aula/cadastrar-aula.componen
         MatFormFieldModule,
         MatListModule,
         HttpClientModule,
-        MatSelectModule
+        MatSelectModule,
+        ReactiveFormsModule,
+        FormsModule
     ],
     providers: [],
     bootstrap: [AppComponent]

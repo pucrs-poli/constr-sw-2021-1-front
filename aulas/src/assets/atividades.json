@@ -1,0 +1,37 @@
+[
+    {
+        "idDaAula": "1",
+        "nomeAtividade": "prova T1",
+        "descricao": "Engenharia de software,Ciencias da computacao,Sistemas de informacao",
+        "finalDate": "30/04/2021",
+        "grade": "2021/1",
+        "status": "Concluído"
+    },
+
+    {
+        "idDaAula": "2",
+        "nomeAtividade": "prova T2",
+        "descricao": "Engenharia de software,Ciencias da computacao,Sistemas de informacao",
+        "finalDate": "30/06/2021",
+        "grade": "2021/1",
+        "status": "Em andamento"
+    },
+
+    {
+        "idDaAula": "3",
+        "nomeAtividade": "trabalho 1",
+        "descricao": "Engenharia de software,Ciencias da computacao,Sistemas de informacao",
+        "finalDate": "24/05/2021",
+        "grade": "2021/1",
+        "status": "Concluído"
+    },
+
+    {
+        "idDaAula": "4",
+        "nomeAtividade": "trabalho T2",
+        "descricao": "Engenharia de software,Ciencias da computacao,Sistemas de informacao",
+        "finalDate": "30/06/2021",
+        "grade": "2021/1",
+        "status": "Em andamento"
+    }
+]
