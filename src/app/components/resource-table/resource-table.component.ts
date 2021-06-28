@@ -5,11 +5,12 @@ export interface ResourceElement {
   description: string;
   name: string;
   type: string;
+  actions: string;
 }
 
 const ELEMENT_DATA: ResourceElement[] = [
-  {id: 'dmdm', description: 'Hydrogen', name: 'llallal', type: 'H'},
-  {id: 'dmdm', description: 'Hydrogen', name: 'llallal', type: 'H'},
+  {id: 'dmdm', description: 'Hydrogen', name: 'llallal', type: 'H', actions: 'Ações'},
+  {id: 'dmdm', description: 'Hydrogen', name: 'llallal', type: 'H', actions: 'Ações'},
 ];
 
 @Component({
@@ -18,7 +19,7 @@ const ELEMENT_DATA: ResourceElement[] = [
   styleUrls: ['./resource-table.component.css']
 })
 export class ResourceTableComponent implements OnInit {
-  displayedColumns: string[] = ['id', 'name', 'description', 'type'];
+  displayedColumns: string[] = ['id', 'name', 'description', 'type', 'actions'];
   dataSource = ELEMENT_DATA;
 
   constructor() { }
