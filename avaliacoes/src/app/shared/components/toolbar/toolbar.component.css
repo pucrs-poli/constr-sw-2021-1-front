@@ -1,0 +1,12 @@
+.example-spacer {
+    flex: 1 1 auto;
+}
+
+.mat-elevation-z4 {
+    margin-bottom: 5px;
+}
+
+button:hover {
+    border-radius: 5px;
+    background: rgb(231, 231, 231);
+}

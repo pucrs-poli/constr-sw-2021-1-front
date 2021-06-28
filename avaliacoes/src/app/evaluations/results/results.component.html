@@ -1,0 +1,12 @@
+<div>
+    <div class="results-titulo-container">
+        <mat-icon aria-hidden="false" aria-label="Example home icon" class="results-icone">
+            grading
+        </mat-icon>
+        <div class="results-titulo">Resultados - Teste {{name}}</div>
+    </div>
+    <div class="results-table-container">
+        <app-results-table [results]="results"></app-results-table>
+    </div>
+</div>
+<app-primary-button [text]="'CRIAR'"></app-primary-button>
