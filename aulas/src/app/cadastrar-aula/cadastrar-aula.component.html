@@ -13,25 +13,38 @@
         Cadastrar aula
     </p>
 
-    <form style="margin-left: 6%; flex-direction: column; display: flex; width: 340px;">
+    <form [formGroup]="aulaForm" style="margin-left: 6%; flex-direction: column; display: flex; width: 340px;">
         <mat-form-field appearance="fill">
-            <input matInput placeholder="Nome" type="text" />
+            <mat-label>Nome</mat-label>
+            <input matInput formControlName='nome' [(ngModel)]="valueName">
+            <mat-icon *ngIf="valueName" matSuffix mat-icon-button aria-label="Clear" (click)="valueName=''">close
+            </mat-icon>
         </mat-form-field>
 
         <mat-form-field appearance="fill">
-            <input matInput placeholder="Course" />
+            <mat-label>Course</mat-label>
+            <input matInput formControlName='curso' [(ngModel)]="valueCourse">
+            <mat-icon *ngIf="valueCourse" matSuffix mat-icon-button aria-label="Clear" (click)="valueCourse=''">close
+            </mat-icon>
         </mat-form-field>
-        
+
         <mat-form-field appearance="fill">
+            <mat-label>Activity</mat-label>
             <mat-select multiple>
                 <mat-option *ngFor="let atividade of atividadesLista" [value]="atividade">
                     {{atividade.nomeAtividade}}
                 </mat-option>
             </mat-select>
         </mat-form-field>
-        
+
         <mat-form-field appearance="fill">
-            <input matInput placeholder="Room" />
+            <mat-label>Room</mat-label>
+            <input matInput type="text" formControlName='sala' [(ngModel)]="valueRoom">
+            <mat-icon *ngIf="valueRoom" matSuffix mat-icon-button aria-label="Clear" (click)="valueRoom=''">close
+            </mat-icon>
         </mat-form-field>
     </form>
+    <div>
+        <button class="botao" [routerLink]="['/listagem-aulas']"><mat-icon>keyboard_arrow_left</mat-icon>Voltar</button>
+    </div>
 </div>

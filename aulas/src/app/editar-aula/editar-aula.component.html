@@ -13,25 +13,34 @@
         Editar aula
     </p>
 
-    <form style="margin-left: 6%; flex-direction: column; display: flex; width: 340px;">
+    <form [formGroup]="aulaForm" style="margin-left: 6%; flex-direction: column; display: flex; width: 340px;">
         <mat-form-field appearance="fill">
-            <input matInput placeholder="Nome" type="text" />
+            <mat-label>Nome</mat-label>
+            <input matInput formControlName='nome'>
         </mat-form-field>
 
         <mat-form-field appearance="fill">
-            <input matInput placeholder="Course" />
+            <mat-label>Course</mat-label>
+            <input matInput formControlName='curso'>
         </mat-form-field>
-        
+
         <mat-form-field appearance="fill">
+            <mat-label>Activity</mat-label>
             <mat-select multiple>
                 <mat-option *ngFor="let atividade of atividadesLista" [value]="atividade">
                     {{atividade.nomeAtividade}}
                 </mat-option>
             </mat-select>
         </mat-form-field>
-        
+
         <mat-form-field appearance="fill">
-            <input matInput placeholder="Room" />
+            <mat-label>Activity</mat-label>
+            <input matInput type="text" formControlName='atividade'>
+        </mat-form-field>
+
+        <mat-form-field appearance="fill">
+            <mat-label>Room</mat-label>
+            <input matInput type="text" formControlName='sala'>
         </mat-form-field>
     </form>
 </div>
