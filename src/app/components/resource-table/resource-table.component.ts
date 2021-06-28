@@ -20,18 +20,22 @@ const ELEMENT_DATA: ResourceElement[] = [
   styleUrls: ['./resource-table.component.css']
 })
 export class ResourceTableComponent implements OnInit {
-  displayedColumns: string[] = ['id', 'name', 'description', 'type', 'actions'];
+  displayedColumns: string[] = ['id', 'name', 'description', 'type', 'edit', 'delete'];
   dataSource = ELEMENT_DATA;
-  readonly apiURL : string;
+  readonly apiURL: string;
 
-  buttonClick(){
-    alert('Botão clicado!');
+  handleClick(event: Event, item: ResourceElement) {
+    alert(`Editar recurso com ID ${item.id}`);
+  }
+
+  handleRemove(event: Event, item: ResourceElement){
+    alert(`Remover ID ${item.id}` );
   }
 
   constructor(private http: HttpClient) {
     this.apiURL = 'http://ec2-54-232-199-57.sa-east-1.compute.amazonaws.com';
   }
-  
+
 
 
   // Getting CORS error from API

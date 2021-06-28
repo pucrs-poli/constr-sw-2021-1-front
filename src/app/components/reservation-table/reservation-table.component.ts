@@ -20,12 +20,16 @@ const RESERVATION_DATA: Reservation[] = [
 })
 export class ReservationTableComponent implements OnInit {
 
-  displayedColumns: string[] = ['id', 'lessonID', 'resource', 'day', 'schedule', 'actions'];
-  dataSource = RESERVATION_DATA;
-
-  buttonClick(){
-    alert('Botão clicado!');
+  handleRemove(event: Event, item: Reservation){
+    alert(`Remover ID ${item.id}` );
   }
+
+  handleClick(event: Event, item: Reservation) {
+    alert(`Editar reserva com ID ${item.id}`);
+  }
+
+  displayedColumns: string[] = ['id', 'lessonID', 'resource', 'day', 'schedule', 'edit', 'delete'];
+  dataSource = RESERVATION_DATA;
 
   constructor() { }
 
