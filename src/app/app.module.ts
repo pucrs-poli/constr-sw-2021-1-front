@@ -9,12 +9,14 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ResourceTableComponent } from './components/resource-table/resource-table.component';
 import { ResourceTabsComponent } from './components/resource-tabs/resource-tabs.component';
+import { ReservationTableComponent } from './components/reservation-table/reservation-table.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ResourceTableComponent,
-    ResourceTabsComponent
+    ResourceTabsComponent,
+    ReservationTableComponent
   ],
   imports: [
     BrowserModule,
