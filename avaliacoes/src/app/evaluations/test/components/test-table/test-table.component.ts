@@ -24,4 +24,8 @@ export class TestTableComponent implements OnInit {
   onClickResults(tests: TestModel){
     this.router.navigateByUrl("/results", { state: { results: tests.results, name: tests.id}})
   }
+
+  onClickQuestions(tests: TestModel){
+    this.router.navigateByUrl("/questions", { state: { questions: tests.questions, name: tests.id}})
+  }
 }

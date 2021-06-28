@@ -10,6 +10,7 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatIconModule } from '@angular/material/icon';
 import { MatTableModule } from '@angular/material/table';
+import { MatExpansionModule } from '@angular/material/expansion';
 
 import { TestsComponent } from './tests/tests.component';
 import { EvaluationsService } from './services/evaluations.service';
@@ -19,6 +20,8 @@ import { TestComponent } from './test/test.component';
 import { TestTableComponent } from './test/components/test-table/test-table.component';
 import { ResultsComponent } from './results/results.component';
 import { ResultsTableComponent } from './results/results-table/results-table.component';
+import { QuestionsComponent } from './questions/questions.component';
+import { QuestionsExpansionComponent } from './questions/questions-expansion/questions-expansion.component';
 
 @NgModule({
   declarations: [
@@ -28,6 +31,8 @@ import { ResultsTableComponent } from './results/results-table/results-table.com
     TestTableComponent,
     ResultsComponent,
     ResultsTableComponent,
+    QuestionsComponent,
+    QuestionsExpansionComponent,
   ],
   imports: [
     EvaluationsRoutingModule,
@@ -41,6 +46,7 @@ import { ResultsTableComponent } from './results/results-table/results-table.com
     MatTableModule,
     MatPaginatorModule,
     MatSortModule,
+    MatExpansionModule,
   ],
   providers: [
     EvaluationsService,

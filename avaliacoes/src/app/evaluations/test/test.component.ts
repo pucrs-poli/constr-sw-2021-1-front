@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { TestModel } from '../models/test.model';
 
@@ -7,7 +7,7 @@ import { TestModel } from '../models/test.model';
   templateUrl: './test.component.html',
   styleUrls: ['./test.component.css']
 })
-export class TestComponent implements OnInit {
+export class TestComponent  {
   
   testName: string;
   tests: TestModel[];
@@ -15,8 +15,5 @@ export class TestComponent implements OnInit {
   constructor(private router: Router) {
     this.tests = this.router.getCurrentNavigation().extras.state.test;
     this.testName = this.router.getCurrentNavigation().extras.state.subject;
-  }
-
-  ngOnInit() {
   }
 }
