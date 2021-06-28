@@ -19,9 +19,13 @@ const ELEMENT_DATA: ResourceElement[] = [
   styleUrls: ['./resource-table.component.css']
 })
 export class ResourceTableComponent implements OnInit {
-  displayedColumns: string[] = ['id', 'name', 'description', 'type'];
+  displayedColumns: string[] = ['id', 'name', 'description', 'type', 'edit'];
   dataSource = ELEMENT_DATA;
-  readonly apiURL : string;
+  readonly apiURL: string;
+
+  handleClick(event: Event, item: ResourceElement) {
+    alert(`Editar recurso com ID ${item.id}`);
+  }
 
   constructor(private http: HttpClient) {
     this.apiURL = 'http://ec2-54-232-199-57.sa-east-1.compute.amazonaws.com';
