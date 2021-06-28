@@ -22,12 +22,14 @@ import { ReservationTableComponent } from './components/reservation-table/reserv
 import { ResourcesPageComponent } from './pages/resources-page/resources-page.component';
 import { HomePageComponent } from './pages/home-page/home-page.component';
 import { EditResourcePageComponent } from './pages/edit-resource-page/edit-resource-page.component';
+import { EditReservationPageComponent } from './pages/edit-reservation-page/edit-reservation-page.component';
 
 
 const appRoutes: Routes = [
   { path: '', component: HomePageComponent },
   { path: 'recursos', component: ResourcesPageComponent },
   { path: 'recursos/editar/:id', component: EditResourcePageComponent },
+  { path: 'reservas/editar/:id', component: EditReservationPageComponent },
   { path: '**', component: HomePageComponent },
 ];
 @NgModule({
@@ -38,7 +40,8 @@ const appRoutes: Routes = [
     ReservationTableComponent,
     ResourcesPageComponent,
     HomePageComponent,
-    EditResourcePageComponent
+    EditResourcePageComponent,
+    EditReservationPageComponent
   ],
   imports: [
     RouterModule.forRoot(
