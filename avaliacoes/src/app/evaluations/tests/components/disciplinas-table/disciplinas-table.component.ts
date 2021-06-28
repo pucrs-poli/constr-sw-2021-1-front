@@ -14,8 +14,7 @@ export class DisciplinasTableComponent implements OnInit {
 
   displayedColumns = ['name', 'numberTests'];
 
-  constructor(
-    private router: Router,
+  constructor(protected router: Router,
   ) {}
 
   ngOnInit() {
@@ -25,6 +24,6 @@ export class DisciplinasTableComponent implements OnInit {
 
   onClickItem(subject: string) {
     const tests = this.tests.filter( e => e.subjects.includes(subject));
-    this.router.navigateByUrl("/test", { state: { test: tests, subject: subject } })
+    this.router.navigateByUrl("/test", { state: { test: tests, subject: subject } });
   }
 }

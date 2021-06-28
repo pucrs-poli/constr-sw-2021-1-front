@@ -7,13 +7,17 @@ import { TestModel } from '../models/test.model';
   templateUrl: './test.component.html',
   styleUrls: ['./test.component.css']
 })
-export class TestComponent  {
+export class TestComponent{
   
-  testName: string;
+  subject: string;
   tests: TestModel[];
   
-  constructor(private router: Router) {
+  constructor(protected router: Router) {
     this.tests = this.router.getCurrentNavigation().extras.state.test;
-    this.testName = this.router.getCurrentNavigation().extras.state.subject;
+    this.subject = this.router.getCurrentNavigation().extras.state.subject;
   }
+  
+ /*  onClickPrimaryButton(event){
+    this.router.navigateByUrl("/form-test", { state: { subject: this.subject }});
+  } */
 }

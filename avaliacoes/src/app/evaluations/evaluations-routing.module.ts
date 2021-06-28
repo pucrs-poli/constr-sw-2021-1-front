@@ -5,6 +5,7 @@ import { TestsComponent } from "./tests/tests.component";
 import { TestComponent } from "./test/test.component";
 import { ResultsComponent } from "./results/results.component";
 import { QuestionsComponent } from "./questions/questions.component";
+import { FormTestsComponent } from "./form-tests/form-tests.component";
 
 const routes: Routes = [
     {
@@ -22,6 +23,10 @@ const routes: Routes = [
     {
         path: 'questions',
         component: QuestionsComponent,
+    },
+    {
+        path: 'form-test',
+        component: FormTestsComponent,
     }
 ];
 

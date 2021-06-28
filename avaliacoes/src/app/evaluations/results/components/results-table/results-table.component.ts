@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { ResultModel } from '../../models/result.model';
+import { ResultModel } from '../../../models/result.model';
 
 @Component({
   selector: 'app-results-table',

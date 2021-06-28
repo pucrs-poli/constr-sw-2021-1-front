@@ -19,9 +19,10 @@ import { SharedModule } from '../shared/shared.module';
 import { TestComponent } from './test/test.component';
 import { TestTableComponent } from './test/components/test-table/test-table.component';
 import { ResultsComponent } from './results/results.component';
-import { ResultsTableComponent } from './results/results-table/results-table.component';
+import { ResultsTableComponent } from './results/components/results-table/results-table.component';
 import { QuestionsComponent } from './questions/questions.component';
-import { QuestionsExpansionComponent } from './questions/questions-expansion/questions-expansion.component';
+import { QuestionsExpansionComponent } from './questions/components/questions-expansion/questions-expansion.component';
+import { FormTestsComponent } from './form-tests/form-tests.component';
 
 @NgModule({
   declarations: [
@@ -33,6 +34,7 @@ import { QuestionsExpansionComponent } from './questions/questions-expansion/que
     ResultsTableComponent,
     QuestionsComponent,
     QuestionsExpansionComponent,
+    FormTestsComponent,
   ],
   imports: [
     EvaluationsRoutingModule,
