@@ -9,8 +9,8 @@ export interface ResourceElement {
 }
 
 const ELEMENT_DATA: ResourceElement[] = [
-  {id: 'dmdm', description: 'Hydrogen', name: 'llallal', type: 'H'},
-  {id: 'dmdm', description: 'Hydrogen', name: 'llallal', type: 'H'},
+  {id: '60d90188eb3c5a3d9616ae21', description: 'Projetor branco de  2019', name: 'Projetor Epson PowerLite S41', type: 'PROJETOR'},
+  {id: '60d901bbeb3c5a3d9616ae22', description: 'Projetor preto de  2019', name: 'Projetor Epson PowerLite S41', type: 'PROJETOR'},
 ];
 
 @Component({
