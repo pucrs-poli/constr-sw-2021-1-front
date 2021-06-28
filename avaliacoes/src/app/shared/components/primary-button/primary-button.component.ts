@@ -10,11 +10,11 @@ export class PrimaryButtonComponent implements OnInit {
   @Input() text: string = '';
   @Input() icon: string = '';
 
-  @Output() clicked: EventEmitter<any> = new EventEmitter();
+  @Output() onClickedButton: EventEmitter<any> = new EventEmitter();
   
   constructor() { }
 
   ngOnInit() {
+    this.onClickedButton.emit();
   }
-
 }
