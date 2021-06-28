@@ -20,8 +20,12 @@ const RESERVATION_DATA: Reservation[] = [
 })
 export class ReservationTableComponent implements OnInit {
 
-  displayedColumns: string[] = ['id', 'lessonID', 'resource', 'day', 'schedule'];
+  displayedColumns: string[] = ['id', 'lessonID', 'resource', 'day', 'schedule', 'actions'];
   dataSource = RESERVATION_DATA;
+
+  buttonClick(){
+    alert('Botão clicado!');
+  }
 
   constructor() { }
 
