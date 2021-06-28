@@ -1,0 +1,16 @@
+<div class="mat-elevation-z8 full-width-table">
+    <table mat-table [dataSource]="results" class="mg-b" aria-label="Elements">
+        <ng-container matColumnDef="Results">
+            <th mat-header-cell *matHeaderCellDef class="tests-table-title">Results</th>
+            <td mat-cell *matCellDef="let element">
+                <div>
+                    <p>Estudante id: {{element.studentId}}</p>
+                    <p>Teste id: {{element.testId}}</p>
+                    <p>Nota: {{element.note}}</p>
+                </div>
+            </td>
+        </ng-container>
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;" class="tests-table-line"></tr>
+    </table>
+</div>
