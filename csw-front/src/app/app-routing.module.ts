@@ -4,6 +4,10 @@ import { HomeComponent } from "./home/home.component";
 
 const routes: Routes = [
     {
+        path: 'resources',
+        loadChildren: () => import('./resources/resources.module').then(m => m.ResourcesModule),
+    },
+    {
         path: 'evaluations',
         loadChildren: () => import('./evaluations/evaluations.module').then(m => m.EvaluationsModule),
     },
