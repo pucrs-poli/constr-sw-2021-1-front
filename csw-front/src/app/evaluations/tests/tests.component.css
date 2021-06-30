@@ -1,0 +1,23 @@
+.disciplinas-titulo {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 34px;
+    line-height: 36px;
+}
+
+.disciplinas-icone {
+    color: orange;
+    font-size: 35px;
+    margin-right: 1rem;
+}
+
+.disciplinas-titulo-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 16px;
+}
+
+.disciplinas-table-container {
+    display: flex;
+    justify-content: center;
+}

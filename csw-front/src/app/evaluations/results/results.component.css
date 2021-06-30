@@ -1,0 +1,23 @@
+.results-titulo {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 34px;
+    line-height: 36px;
+}
+
+.results-icone {
+    color: orange;
+    font-size: 35px;
+    margin-right: 1rem;
+}
+
+.results-titulo-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 16px;
+}
+
+.results-table-container {
+    display: flex;
+    justify-content: center;
+}

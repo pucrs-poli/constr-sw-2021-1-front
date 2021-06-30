@@ -1,0 +1,46 @@
+.tests-collum-size-teste {
+    width: 126px;
+    text-align: center;
+}
+
+.tests-table-title {
+    font-size: 18px;
+    color: gray;
+    border-bottom-width: 0px;
+}
+
+.tests-table-line {
+    height: 70px;
+}
+
+.tests-table-line:hover {
+    font-weight: bold;
+    cursor: pointer;
+}
+
+p {
+    font-size: 14px;
+    margin: 0px;
+    color: #6D8A96
+}
+
+p:first-child {
+    font-size: 16px;
+    padding: 4px 0px;
+    color: black
+}
+
+.mat-icon-color {
+    padding: 8px;
+    border-radius: 10px;
+    color: #5D707F;
+}
+
+.mat-icon-color:hover {
+    background-color: rgb(231, 231, 231);
+}
+
+td.mat-cell:last-of-type,
+td.mat-footer-cell {
+    padding-right: 0px;
+}
