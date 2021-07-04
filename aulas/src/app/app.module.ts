@@ -22,7 +22,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { FormsModule } from '@angular/forms';
 import { ListagemAtividadeComponent } from './listagem-atividade/listagem-atividade.component';
 import { EditarAtividadeComponent } from './editar-atividade/editar-atividade.component';
-
+import { Ng2SearchPipeModule } from "ng2-search-filter";
 
 @NgModule({
     declarations: [
@@ -46,7 +46,8 @@ import { EditarAtividadeComponent } from './editar-atividade/editar-atividade.co
         HttpClientModule,
         MatSelectModule,
         ReactiveFormsModule,
-        FormsModule
+        FormsModule,
+        Ng2SearchPipeModule
     ],
     providers: [],
     bootstrap: [AppComponent]

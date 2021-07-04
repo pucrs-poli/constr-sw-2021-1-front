@@ -9,7 +9,8 @@
         </div>
 
         <mat-form-field appearance="fill">
-            <input matInput placeholder="ID da atividade" style="width: 336px;" />
+            <mat-label>ID da atividade</mat-label>
+            <input matInput placeholder="ID da atividade" style="width: 336px;" [(ngModel)]="selectedId" />
         </mat-form-field>
     </div>
 
@@ -18,7 +19,7 @@
     </p>
 
     <ul>
-        <li *ngFor="let atividade of atividades" style="list-style-type: none; margin-bottom: 20px;">
+        <li *ngFor="let atividade of atividades | filter:selectedId" style="list-style-type: none; margin-bottom: 20px;">
             <div style="display: flex; align-items: center;">
                 <div>
                     <span class="nomeAula">{{ atividade.nomeAtividade }}</span> - <span class="nomeAula">{{
@@ -53,11 +54,7 @@
             </div>
         </li>
     </ul>
-
-
-
-    <!-- <mat-selection-list #aulas [multiple]="false">
-        <mat-list-option *ngFor="let aula of aulas">
-        </mat-list-option>
-    </mat-selection-list> -->
+    <section>
+        <button mat-raised-button class="button-aula" [routerLink] = "['/cadastrar-atividade']" >Cadastrar</button>
+      </section>
 </div>

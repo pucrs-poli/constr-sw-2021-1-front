@@ -8,6 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ListagemAtividadeComponent implements OnInit {
   atividades: any = [];
+  selectedId: any;
 
   constructor( private httpClient: HttpClient) { }
 

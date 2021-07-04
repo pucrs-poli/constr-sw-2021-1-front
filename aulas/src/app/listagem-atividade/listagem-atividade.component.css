@@ -34,3 +34,15 @@
 img {
     margin-left: 40px;
 }
+
+section {
+    width: 20%;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  section .button-aula {
+    background: #F18F01;
+    padding: 8px 16px;
+    border-radius: 30px;
+  }

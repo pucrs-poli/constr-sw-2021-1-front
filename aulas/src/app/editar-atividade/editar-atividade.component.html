@@ -10,7 +10,7 @@
     </div>
 
     <p class="subtitulo">
-        Cadastrar atividade
+        Editar atividade
     </p>
 
     <form [formGroup]="atividadeForm" style="margin-left: 6%; flex-direction: column; display: flex; width: 340px;">
@@ -45,8 +45,9 @@
         </mat-form-field>
 
     </form>
-    <div>
-        <button class="botao" [routerLink]="['/listagem-aulas']"><mat-icon>keyboard_arrow_left</mat-icon>Voltar</button>
-    </div>
+    <section>
+        <button mat-raised-button class="button-aula" [routerLink] = "['/listagem-atividade']">Voltar</button>
+        <button mat-raised-button class="button-aula" [routerLink] = "">Salvar</button>
+      </section>
 </div>
 

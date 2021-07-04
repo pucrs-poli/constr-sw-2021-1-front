@@ -8,12 +8,14 @@ import { HttpClient } from "@angular/common/http";
 })
 export class ListagemAulasComponent implements OnInit {
     aulas: any = [];
+    selectedId: any;
 
     constructor(
         private httpClient: HttpClient
     ) { }
 
     ngOnInit(): void {
+        this.selectedId;
         this.httpClient.get("assets/aulas.json").subscribe((data: any[]) => {
             this.aulas = data;
         })

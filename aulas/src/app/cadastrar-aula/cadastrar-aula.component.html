@@ -44,7 +44,8 @@
             </mat-icon>
         </mat-form-field>
     </form>
-    <div>
-        <button class="botao" [routerLink]="['/listagem-aulas']"><mat-icon>keyboard_arrow_left</mat-icon>Voltar</button>
-    </div>
+    <section>
+        <button mat-raised-button class="button-aula" [routerLink] = "['/listagem-aulas']">Voltar</button>
+        <button mat-raised-button class="button-aula" [routerLink] = "">Criar</button>
+      </section>
 </div>

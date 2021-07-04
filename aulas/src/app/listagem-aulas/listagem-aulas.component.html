@@ -9,7 +9,8 @@
         </div>
 
         <mat-form-field appearance="fill">
-            <input matInput placeholder="ID da aula" style="width: 336px;" />
+            <mat-label>ID da aula</mat-label>
+            <input  matInput placeholder="ID da aula" style="width: 336px;" [(ngModel)]="selectedId"/>
         </mat-form-field>
     </div>
 
@@ -18,7 +19,7 @@
     </p>
 
     <ul>
-        <li *ngFor="let aula of aulas" style="list-style-type: none; margin-bottom: 20px;">
+        <li *ngFor="let aula of aulas | filter:selectedId" style="list-style-type: none; margin-bottom: 20px;">
             <div style="display: flex; align-items: center;">
                 <div>
                     <span class="nomeAula">{{ aula.nomeAula }}</span>
@@ -53,10 +54,8 @@
         </li>
     </ul>
 
+    <section>
+        <button mat-raised-button class="button-aula" [routerLink] = "['/cadastrar-aula']" >Cadastrar</button>
+      </section>
 
-
-    <!-- <mat-selection-list #aulas [multiple]="false">
-        <mat-list-option *ngFor="let aula of aulas">
-        </mat-list-option>
-    </mat-selection-list> -->
 </div>
