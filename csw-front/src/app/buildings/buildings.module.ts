@@ -21,6 +21,7 @@ import { MatCardModule } from '@angular/material/card';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatButtonModule } from '@angular/material/button';
 import { LayoutModule } from '@angular/cdk/layout';
+import {BuildingsRoutingModule} from './buildings-routing.module';
 
 @NgModule({
   declarations: [
@@ -30,6 +31,7 @@ import { LayoutModule } from '@angular/cdk/layout';
     XComponent,
   ],
   imports: [
+    BuildingsRoutingModule,
     HttpClientModule,
     CommonModule,
     SharedModule,

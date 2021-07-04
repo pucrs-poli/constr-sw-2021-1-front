@@ -1,5 +1,5 @@
-import { NgModule } from "@angular/core";
-import { RouterModule, Routes } from "@angular/router";
+import { NgModule } from '@angular/core';
+import { RouterModule, Routes } from '@angular/router';
 
 import { ResourcesPageComponent } from './pages/resources-page/resources-page.component';
 import { EditResourcePageComponent } from './pages/edit-resource-page/edit-resource-page.component';

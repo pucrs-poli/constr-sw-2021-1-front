@@ -4,7 +4,6 @@ import {RouterModule, Routes} from '@angular/router';
 import {BuildingDetailComponent} from './pages/building-detail/building-detail.component';
 import {RoomComponent} from './pages/room/room.component';
 import {BuildingsListComponent} from './pages/buildings-list/buildings-list.component';
-import {XComponent} from './x/x.component';
 
 const routes: Routes = [
   {
@@ -19,10 +18,6 @@ const routes: Routes = [
     path: 'building/:id/room/:id',
     component: RoomComponent,
   },
-  {
-    path: 'x',
-    component: XComponent,
-  }
 ];
 
 @NgModule({
