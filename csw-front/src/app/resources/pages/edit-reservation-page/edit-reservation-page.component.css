@@ -1,0 +1,41 @@
+.example-spacer {
+  flex: 1 1 auto;
+}
+
+.meio{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.example-form {
+  min-width: 150px;
+  max-width: 500px;
+  width: 100%;
+}
+
+.example-full-width {
+  width: 100%;
+}
+
+.posicaodiv{
+  width: 70%;
+}
+
+.wrapper{
+  width: 100%;
+  margin-left: 30%;
+}
+
+section{
+  width: 20%;
+  display: flex;
+  justify-content: space-between;
+}
+
+section .primary-button_resources {
+  background: #F18F01;
+  padding: 8px 16px;
+  border-radius: 30px;
+}
