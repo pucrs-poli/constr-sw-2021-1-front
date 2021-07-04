@@ -14,7 +14,7 @@ import { EvaluationsModule } from './evaluations/evaluations.module';
 import { HomeComponent } from './home/home.component';
 import { SharedModule } from './shared/shared.module';
 import { AppRoutingModule } from './app-routing.module';
-
+import {BuildingsModule} from './buildings/buildings.module';
 
 @NgModule({
   declarations: [
@@ -27,6 +27,7 @@ import { AppRoutingModule } from './app-routing.module';
     EvaluationsModule,
     BrowserModule,
     BrowserAnimationsModule,
+    BuildingsModule,
     SharedModule,
     RouterModule,
     MatIconModule,

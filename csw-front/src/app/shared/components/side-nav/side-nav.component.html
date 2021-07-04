@@ -1,7 +1,7 @@
 <mat-drawer-container class="example-container background" autosize>
     <mat-drawer [opened]="showSideNav" mode="side" class="mat-drawer background">
         <mat-list class="mat-list">
-            <div class="side-option" [style.background-color]="selectedButton === 'Predios' ? '#5D707F' : ''" (click)="onSelect('Predios')">
+            <div class="side-option" [style.background-color]="selectedButton === 'Predios' ? '#5D707F' : ''" (click)="onSelect('buildings')">
                 <mat-icon class="mat-icon" [style.color]="selectedButton === 'Predios' ? 'white' : ''">domain</mat-icon>
                 <a mat-button [style.color]="selectedButton === 'Predios' ? '#F18F01' : ''">
                     Prédios e salas

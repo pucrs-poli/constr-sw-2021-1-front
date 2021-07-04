@@ -1,11 +1,11 @@
-import { NgModule } from "@angular/core";
-import { RouterModule, Routes } from "@angular/router";
+import { NgModule } from '@angular/core';
+import { RouterModule, Routes } from '@angular/router';
 
-import { TestsComponent } from "./tests/tests.component";
-import { TestComponent } from "./test/test.component";
-import { ResultsComponent } from "./results/results.component";
-import { QuestionsComponent } from "./questions/questions.component";
-import { FormTestsComponent } from "./form-tests/form-tests.component";
+import { TestsComponent } from './tests/tests.component';
+import { TestComponent } from './test/test.component';
+import { ResultsComponent } from './results/results.component';
+import { QuestionsComponent } from './questions/questions.component';
+import { FormTestsComponent } from './form-tests/form-tests.component';
 
 const routes: Routes = [
     {
