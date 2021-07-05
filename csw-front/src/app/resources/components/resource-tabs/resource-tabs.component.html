@@ -1,7 +1,7 @@
 <mat-tab-group>
   <mat-tab label="Recursos">
     <div class="resource_tab-content">
-      <button (click)="handleAdd($event)" mat-stroked-button color="primary">Adicionar novo recurso</button>
+      <button routerLink="/resources/new" mat-stroked-button color="primary">Adicionar novo recurso</button>
       <app-resource-table></app-resource-table>
     </div>
   </mat-tab>

@@ -7,10 +7,6 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ResourceTabsComponent implements OnInit {
 
-  handleAdd(event: Event) {
-    alert('Adicionar novo recurso');
-  }
-
   constructor() { }
 
   ngOnInit(): void {
