@@ -5,6 +5,12 @@
       Prédio {{id}}
     </span>
   </span>
+    <mat-grid-list cols="2" rowHeight="72px">
+      <mat-grid-tile class="grid-tile">
+        <h4 mat-line class="first">Capacidade máxima<br/></h4>
+        <p mat-line class="second">200 pessoas</p>
+      </mat-grid-tile>
+    </mat-grid-list>
     <span class="description-container">
     <span class="description">
       Salas
@@ -25,7 +31,7 @@
         <button mat-icon-button class="delete-action" (click)="deleteRoom($event)">
           <mat-icon>delete</mat-icon>
         </button>
-        <mat-divider class="list-divider"></mat-divider>
+        <mat-divider [inset]="true" class="list-divider"></mat-divider>
       </mat-list-item>
 
     </mat-nav-list>

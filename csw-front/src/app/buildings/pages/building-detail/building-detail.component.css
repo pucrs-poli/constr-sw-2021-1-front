@@ -58,7 +58,6 @@
 }
 
 .list-divider {
-  margin-left: 4.44%;
   /* Surface overlay */
   color: rgba(33, 33, 33, 0.08);
   mix-blend-mode: normal;
@@ -128,4 +127,15 @@
 
 .second-fab {
   bottom: 112px;
+}
+
+.grid-tile {
+}
+
+.grid-tile .first {
+  text-align: left;
+}
+
+.grid-tile .second {
+  text-align: right;
 }
