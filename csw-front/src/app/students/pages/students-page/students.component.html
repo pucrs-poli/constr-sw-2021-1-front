@@ -1,0 +1,13 @@
+<div class="students-title-container">
+  <mat-icon aria-hidden="false" aria-label="Students icon" class="students-icon">book
+  </mat-icon>
+  <div>
+    <div class="students-title">Alunos</div>
+    <h6>Aqui você pode ver os alunos cadastrados.</h6>
+  </div>
+</div>
+<div class="students-table-container">
+  <app-student-table></app-student-table>
+</div>
+<app-primary-button [text]="'CRIAR'" routerLink="/students/create"></app-primary-button>
+<router-outlet></router-outlet>

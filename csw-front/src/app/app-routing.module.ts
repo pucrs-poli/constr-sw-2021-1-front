@@ -4,6 +4,10 @@ import { HomeComponent } from './home/home.component';
 
 const routes: Routes = [
   {
+      path: 'students',
+      loadChildren: () => import('./students/students.module').then(m => m.StudentsModule),
+  },
+  {
     path: 'resources',
     loadChildren: () => import('./resources/resources.module').then(m => m.ResourcesModule),
   },
@@ -30,4 +34,4 @@ const routes: Routes = [
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule],
 })
-export class AppRoutingModule {}
+export class AppRoutingModule{}
