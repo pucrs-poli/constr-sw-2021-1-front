@@ -5,20 +5,20 @@ import { HomeComponent } from './home/home.component';
 const routes: Routes = [
   {
     path: 'resources',
-    loadChildren: () =>
-      import('./resources/resources.module').then((m) => m.ResourcesModule),
+    loadChildren: () => import('./resources/resources.module').then(m => m.ResourcesModule),
+  },
+  {
+      path: 'lesson',
+      loadChildren: () => import('./lesson/lesson.module').then(m => m.LessonModule),
   },
   {
     path: 'evaluations',
-    loadChildren: () =>
-      import('./evaluations/evaluations.module').then(
-        (m) => m.EvaluationsModule
+    loadChildren: () => import('./evaluations/evaluations.module').then(m => m.EvaluationsModule
       ),
   },
   {
     path: 'buildings',
-    loadChildren: () =>
-      import('./buildings/buildings.module').then((m) => m.BuildingsModule),
+    loadChildren: () => import('./buildings/buildings.module').then((m) => m.BuildingsModule),
   },
   {
     path: 'home',

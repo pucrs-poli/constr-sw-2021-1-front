@@ -1,0 +1,50 @@
+<div class="container">
+    <div class="aulas-titulo-container">
+        <mat-icon aria-hidden="false" aria-label="Example home icon" class="aulas-icone">auto_stories
+        </mat-icon>
+        <div class="aulas-titulo">Aulas</div>
+    </div>
+
+    <p class="aulas-table-container">
+        Editar aula
+    </p>
+    <div class="aulas-table-container">
+        <form [formGroup]="aulaForm" style="margin-left: 6%; flex-direction: column; display: flex; width: 340px;">
+            <mat-form-field appearance="fill">
+                <mat-label>Nome</mat-label>
+                <input matInput formControlName='nome'>
+            </mat-form-field>
+    
+            <mat-form-field appearance="fill">
+                <mat-label>Course</mat-label>
+                <input matInput formControlName='curso'>
+            </mat-form-field>
+    
+            <mat-form-field appearance="fill">
+                <mat-label>Activity</mat-label>
+                <mat-select multiple>
+                    <mat-option *ngFor="let atividade of atividadesLista" [value]="atividade">
+                        {{atividade.nomeAtividade}}
+                    </mat-option>
+                </mat-select>
+            </mat-form-field>
+    
+            <mat-form-field appearance="fill">
+                <mat-label>Activity</mat-label>
+                <input matInput type="text" formControlName='atividade'>
+            </mat-form-field>
+    
+            <mat-form-field appearance="fill">
+                <mat-label>Room</mat-label>
+                <input matInput type="text" formControlName='sala'>
+            </mat-form-field>
+        </form>
+    </div>
+
+    <section>
+        <button mat-raised-button class="button-aula" [routerLink] = "['/listagem-aulas']">Voltar</button>
+        <button mat-raised-button class="button-aula" [routerLink] = "">Salvar</button>
+      </section>
+
+</div>
+

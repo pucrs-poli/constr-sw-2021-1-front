@@ -1,0 +1,78 @@
+.container {
+    width: 50%;
+    margin-left: 25%;
+}
+
+.logo {
+    width: 36px; 
+    height: 36px;
+}
+
+.titulo {
+    font-size: 34px; 
+    margin-left: 10px;
+    margin-top: 10px;
+}
+
+.subtitulo {
+    font-size: 25px; 
+    color: #5d707f;
+    margin-left: 6%;
+}
+
+.nomeAula {
+    font-size: 16px;
+    color: black;
+}
+
+.informacoes {
+    font-size: 14px;
+    color: #6d8a96;
+    display: flex;
+}
+
+img {
+    margin-left: 40px;
+}
+
+section {
+    width: 20%;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  section .button-aula {
+    background: #F18F01;
+    padding: 8px 16px;
+    border-radius: 30px;
+  }
+
+  
+  .aulas-titulo {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 34px;
+    line-height: 36px;
+}
+
+.aulas-icone {
+    color: orange;
+    font-size: 35px;
+    margin-right: 1rem;
+}
+
+.aulas-titulo-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 16px;
+}
+
+.aulas-table-container {
+    display: flex;
+    justify-content: center;
+}
+
+
+
+
+
