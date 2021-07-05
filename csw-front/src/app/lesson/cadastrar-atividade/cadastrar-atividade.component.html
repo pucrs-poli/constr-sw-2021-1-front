@@ -1,0 +1,65 @@
+<div class="container">
+    <div class="aulas-titulo-container">
+        <mat-icon aria-hidden="false" aria-label="Example home icon" class="aulas-icone">auto_stories
+        </mat-icon>
+        <div class="aulas-titulo">Atividade</div>
+    </div>
+
+    <p class="aulas-table-container">
+        Cadastrar atividade
+    </p>
+
+    <div class="aulas-table-container">
+        <form [formGroup]="atividadeForm" style="margin-left: 6%; flex-direction: column; display: flex; width: 340px;">
+            <mat-form-field appearance="fill">
+                <mat-label>Lesson ID</mat-label>
+                <input matInput formControlName='lessonID' [(ngModel)]="valuelessonID">
+                <mat-icon *ngIf="valuelessonID" matSuffix mat-icon-button aria-label="Clear" (click)="valuelessonID=''">close
+                </mat-icon>
+            </mat-form-field>
+    
+            <mat-form-field appearance="fill">
+                <mat-label>Name</mat-label>
+                <input matInput formControlName='name' [(ngModel)]="valueName">
+                <mat-icon *ngIf="valueName" matSuffix mat-icon-button aria-label="Clear" (click)="valueName=''">close
+                </mat-icon>
+            </mat-form-field>
+    
+            <mat-form-field appearance="fill">
+                <mat-label>Description</mat-label>
+                <input matInput type="text" formControlName='description' [(ngModel)]="valueDescription">
+                <mat-icon *ngIf="valueDescription" matSuffix mat-icon-button aria-label="Clear" (click)="valueDescription=''">close
+                </mat-icon>
+            </mat-form-field>
+    
+            <mat-form-field appearance="fill">
+                <mat-label>Grade</mat-label>
+                <input matInput type="text" formControlName='grade' [(ngModel)]="valueGrade">
+                <mat-icon *ngIf="valueGrade" matSuffix mat-icon-button aria-label="Clear" (click)="valueGrade=''">close
+                </mat-icon>
+            </mat-form-field>
+    
+            <mat-form-field appearance="fill">
+                <mat-label>Final Date</mat-label>
+                <input matInput type="text" formControlName='finalDate' [(ngModel)]="valueFinalDate">
+                <mat-icon *ngIf="valueFinalDate" matSuffix mat-icon-button aria-label="Clear" (click)="valueFinalDate=''">close
+                </mat-icon>
+            </mat-form-field>
+    
+            <mat-form-field appearance="fill">
+                <mat-label>Status</mat-label>
+                <input matInput type="text" formControlName='status' [(ngModel)]="valueStatus">
+                <mat-icon *ngIf="valueStatus" matSuffix mat-icon-button aria-label="Clear" (click)="valueStatus=''">close
+                </mat-icon>
+            </mat-form-field>
+    
+        </form>
+
+    </div>
+   
+    <section>
+        <button mat-raised-button class="button-aula" [routerLink] = "['/listagem-atividade']">Voltar</button>
+        <button mat-raised-button class="button-aula" [routerLink] = "">Criar</button>
+      </section>
+</div>
+

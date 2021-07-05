@@ -1,0 +1,50 @@
+<div class="container">
+    <div class="disciplinas-titulo-container">
+        <mat-icon aria-hidden="false" aria-label="Example home icon" class="disciplinas-icone">auto_stories
+        </mat-icon>
+        <div class="disciplinas-titulo">Aulas</div>
+    </div>
+
+    <p class="disciplinas-table-container">
+        Cadastrar aula
+    </p>
+
+    <div class="disciplinas-table-container">
+        <form  [formGroup]="aulaForm" style="margin-left: 6%; flex-direction: column; display: flex; width: 340px;">
+            <mat-form-field appearance="fill">
+                <mat-label>Nome</mat-label>
+                <input matInput formControlName='nome' [(ngModel)]="valueName">
+                <mat-icon *ngIf="valueName" matSuffix mat-icon-button aria-label="Clear" (click)="valueName=''">close
+                </mat-icon>
+            </mat-form-field>
+    
+            <mat-form-field appearance="fill">
+                <mat-label>Course</mat-label>
+                <input matInput formControlName='curso' [(ngModel)]="valueCourse">
+                <mat-icon *ngIf="valueCourse" matSuffix mat-icon-button aria-label="Clear" (click)="valueCourse=''">close
+                </mat-icon>
+            </mat-form-field>
+    
+            <mat-form-field appearance="fill">
+                <mat-label>Activity</mat-label>
+                <mat-select multiple>
+                    <mat-option *ngFor="let atividade of atividadesLista" [value]="atividade">
+                        {{atividade.nomeAtividade}}
+                    </mat-option>
+                </mat-select>
+            </mat-form-field>
+    
+            <mat-form-field appearance="fill">
+                <mat-label>Room</mat-label>
+                <input matInput type="text" formControlName='sala' [(ngModel)]="valueRoom">
+                <mat-icon *ngIf="valueRoom" matSuffix mat-icon-button aria-label="Clear" (click)="valueRoom=''">close
+                </mat-icon>
+            </mat-form-field>
+        </form>
+    </div> 
+</div>
+<section>
+    <button mat-raised-button class="button-aula" [routerLink] = "['/listagem-aulas']">Voltar</button>
+    <button mat-raised-button class="button-aula" [routerLink] = "">Criar</button>
+  </section>
+
