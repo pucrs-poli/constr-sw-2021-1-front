@@ -1,1 +1,34 @@
-<p>form-tests works!</p>
+<div class="forms-titulo-container">
+    <mat-icon aria-hidden="false" aria-label="Example home icon" class="forms-icone">
+        auto_stories
+    </mat-icon>
+    <div class="forms-titulo">Teste - {{ data }}</div>
+</div>
+
+<mat-dialog-content class="mat-typography">
+    <div class="forms-header">
+        <div class="forms-subtitle">Perguntas</div>
+        <button mat-icon-button class="mat-icon-button" (click)="onClickAdd()">
+            <mat-icon class="mat-icon-add">add</mat-icon>
+        </button>
+    </div>
+    <div class="forms-options">
+        <mat-form-field class="example-full-width" appearance="fill ">
+            <mat-label>Peso</mat-label>
+            <input [(ngModel)]="weight" matInput placeholder="Ex. 1.0">
+        </mat-form-field>
+        <mat-form-field class="example-full-width" appearance="fill ">
+            <mat-label>Duração em min:</mat-label>
+            <input [(ngModel)]="duration" matInput placeholder="60">
+        </mat-form-field>
+    </div>
+
+    <div *ngFor="let question of questions; let i = index" class="questions">
+        <app-questions-form (questionEmit)="receiveQuestion($event, i)" (questionDeleted)="questionDeleted(i)"></app-questions-form>
+    </div>
+</mat-dialog-content>
+
+<mat-dialog-actions align="end">
+    <button mat-button mat-dialog-close class="btn-cancel">Cancelar</button>
+    <button mat-button [mat-dialog-close]="createTest()" cdkFocusInitial class="btn-confirm">Criar</button>
+</mat-dialog-actions>

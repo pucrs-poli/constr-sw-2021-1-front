@@ -1,0 +1,35 @@
+.example-form {
+    min-width: 150px;
+    max-width: 500px;
+    width: 100%;
+}
+
+.example-full-width {
+    padding: 0px;
+    width: 100%;
+}
+
+::ng-deep .mat-form-field-wrapper {
+    margin-bottom: -1.25em;
+}
+
+.questions-container {
+    padding: 8px;
+    background-color: #EEF1EF;
+    border-radius: 5px;
+    display: flex;
+    grid-template-columns: 4fr 1fr;
+}
+
+.question-actions {
+    display: flex;
+}
+
+.mat-icon-del {
+    padding: 8px;
+    color: gray;
+}
+
+.mat-icon-del:hover {
+    color: red
+}
