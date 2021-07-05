@@ -16,16 +16,9 @@
 
       <div class="wrapper">
         <div>
-          <h1 class="title">Editar Recurso</h1>
+          <h1 class="title">Novo Recurso</h1>
         </div>
-        <div class="posicaodiv">
-          <form class="example-form">
-            <mat-form-field class="example-full-width" appearance="fill">
-              <mat-label>ID</mat-label>
-              <input matInput />
-            </mat-form-field>
-          </form>
-
+        <div class="container">
           <form class="example-form">
             <mat-form-field class="example-full-width" appearance="fill">
               <mat-label>Nome</mat-label>
@@ -40,6 +33,20 @@
             </mat-form-field>
           </form>
 
+          <div class="edit-type_container">
+            <mat-form-field appearance="fill">
+              <mat-label>Tipo</mat-label>
+                <mat-select>
+                  <mat-option *ngFor="let type of types" [value]="type.name">
+                  {{type.name}}
+                  </mat-option>
+                </mat-select>
+            </mat-form-field>
+            <button routerLink="/resources/new_type">
+              <mat-icon>create</mat-icon>
+            </button>
+          </div>
+
           <form class="example-form">
             <mat-form-field class="example-full-width" appearance="fill">
               <mat-label>Descrição</mat-label>
@@ -49,7 +56,7 @@
         </div>
 
         <section>
-          <button routerLink="/resources" mat-raised-button class="primary-button_resources">Cancelar</button>
+          <button routerLink=".." mat-raised-button class="primary-button_resources">Cancelar</button>
           <button routerLink="/resources" mat-raised-button class="primary-button_resources">Salvar</button>
         </section>
       </div>
