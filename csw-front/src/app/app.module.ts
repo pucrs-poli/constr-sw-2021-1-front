@@ -10,14 +10,11 @@ import { MatTableModule } from '@angular/material/table';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatSortModule } from '@angular/material/sort';
 
-
 import { EvaluationsModule } from './evaluations/evaluations.module';
 import { HomeComponent } from './home/home.component';
 import { SharedModule } from './shared/shared.module';
 import { LessonModule } from './lesson/lesson.module';
-import { AppRoutingModule } from './app-routing.module';
-
- 
+import { AppRoutingModule } from './app-routing.module'; 
 
 @NgModule({
   declarations: [
