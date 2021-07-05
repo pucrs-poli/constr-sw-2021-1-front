@@ -1,0 +1,63 @@
+<div class="list-align">
+  <div class="half-width">
+    <span class="title-container">
+      <span class="title">
+        Prédio {{id}}
+      </span>
+    </span>
+    <form>
+      <div class="input">
+        <mat-form-field appearance="fill">
+          <mat-label>Capacidade máxima</mat-label>
+          <input id="capacity-input" matInput type="number" disabled value="200">
+        </mat-form-field>
+        <mat-form-field class="sideInput" appearance="fill">
+          <mat-label>Andar(es)</mat-label>
+          <input id="building-input" matInput disabled value="2" type="number">
+        </mat-form-field>
+      </div>
+      <div class="input">
+        <mat-form-field appearance="fill">
+          <mat-label>Descrição</mat-label>
+          <input id="description-input" matInput disabled value="Lorem ipsum dolor" type="text">
+        </mat-form-field>
+      </div>
+
+    </form>
+    <span class="description-container">
+      <span class="description">
+        Salas
+      </span>
+    </span>
+
+    <mat-nav-list aria-label="Elements">
+
+      <mat-list-item class="list-tile" *ngFor="let room of rooms" (click)="showRoom(room)">
+        <span matLine class="list-primary-text">Sala {{room}}</span>
+        <span matLine class="list-secondary-text">
+          <span matLine>Capacidade máxima: x.</span>
+          <span matLine>Tipo: Aula</span>
+        </span>
+        <button mat-icon-button class="edit-action" (click)="editRoom(room)">
+          <mat-icon>create</mat-icon>
+        </button>
+        <button mat-icon-button class="delete-action" (click)="deleteRoom($event)">
+          <mat-icon>delete</mat-icon>
+        </button>
+        <mat-divider [inset]="true" class="list-divider"></mat-divider>
+      </mat-list-item>
+
+    </mat-nav-list>
+
+  </div>
+</div>
+
+<button class="extended-fab-button second-fab" mat-fab color="primary">
+  <mat-icon>add</mat-icon>
+  <span class="extended-fab-button__text">Criar</span>
+</button>
+
+<button class="extended-fab-button" mat-fab color="primary">
+  <mat-icon>create</mat-icon>
+  <span class="extended-fab-button__text">Edit</span>
+</button>
