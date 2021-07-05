@@ -24,12 +24,18 @@ import { SubscribersComponent } from './subscribers/subscribers.component';
 import { SubscribersTableComponent } from './tests/components/subscribers-table/subscribers-table.component';
 import { SubscribersService } from './services/subscribers.service';
 
+import { ResultsComponent } from './subscribers/results/results.component';
+import { ResultsTableComponent } from './tests/components/subscribers-table/results-table/results-table.component';
+import { ResultsService } from './services/results.service';
+
 @NgModule({
   declarations: [
     EdicaoDisciplinaComponent,
     EdicaoDisciplinaTableComponent,
     SubscribersComponent,
     SubscribersTableComponent,
+    ResultsComponent,
+    ResultsTableComponent,
     EditFormComponent,
     CreateFormComponent
   ],
@@ -50,7 +56,8 @@ import { SubscribersService } from './services/subscribers.service';
   ],
   providers: [
     DisciplinEditionService,
-    SubscribersService
+    SubscribersService,
+    ResultsService
   ],
   schemas: [
     CUSTOM_ELEMENTS_SCHEMA
