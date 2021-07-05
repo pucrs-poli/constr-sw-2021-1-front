@@ -1,0 +1,23 @@
+
+.mat-table {
+  width: 50vw;
+  margin-top: 20px;
+  border-radius: 5px;
+}
+h2{
+  text-align: center;
+}
+
+.mat-header-cell {
+  text-align: center;
+}
+
+.mat-cell {
+  text-align: center;
+}
+
+.mat-icon:hover{
+  cursor: pointer;
+}
+
+

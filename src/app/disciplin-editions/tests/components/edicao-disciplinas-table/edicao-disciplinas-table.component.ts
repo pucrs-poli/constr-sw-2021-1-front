@@ -17,7 +17,7 @@ export class EdicaoDisciplinaTableComponent implements OnInit {
   active: boolean;
   displayedColumns: string[] =  ['id', 'year', 'semester','active', 'subscribes','Buttons'];
 
-  constructor(public router: Router) {};
+  constructor(protected router: Router) {};
 
   ngOnInit() {
     this.id = this.dataSource[1].id;
@@ -27,19 +27,18 @@ export class EdicaoDisciplinaTableComponent implements OnInit {
     this.active = this.dataSource[1].active;
   }
 
-  onClickItem(item: string) {
-    console.log({item});
-    //const tests = this.dataSource.filter( e => e.subjects.includes(subject));
-    //this.router.navigateByUrl("/test", { state: { test: tests, subject: subject } });
+  onClickCreate() {
+    this.router.navigateByUrl("/create");
   }
 
   onClickSubscribes(item){
-    this.router.navigateByUrl("/home", { state: { dataSource: this.dataSource, item: item } });
+    const itemSelected = this.dataSource.find(i => i.subscribers === item);
+    this.router.navigateByUrl(`/subscribers/${item}`, { state: { dataSource: this.dataSource, item: itemSelected } });
   }
 
   onClickEdit(item){
     const itemSelected = this.dataSource.find(i => i.id === item);
-    this.router.navigateByUrl("/edit", { state: { dataSource: this.dataSource, item: itemSelected } });
+    this.router.navigateByUrl(`/edit/${item}`, { state: { dataSource: this.dataSource, item: itemSelected } });
   }
 
   onClickDelete(){ }

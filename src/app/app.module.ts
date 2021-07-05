@@ -1,3 +1,4 @@
+import { DisciplinEditionModule } from './disciplin-editions/disciplin-edition.module';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
@@ -25,6 +26,7 @@ import { AppRoutingModule } from './app-routing.module';
     CommonModule,
     AppRoutingModule,
     EvaluationsModule,
+    DisciplinEditionModule,
     BrowserModule,
     BrowserAnimationsModule,
     SharedModule,

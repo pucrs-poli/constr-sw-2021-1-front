@@ -1,3 +1,4 @@
+import { Router } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
 import { DisciplinEditionService } from '../services/disciplin-edition.service';
 import { EdicaoDisciplinaModel } from '../models/edicaoDisciplina.model';
@@ -25,7 +26,7 @@ export class EdicaoDisciplinaComponent implements OnInit {
 
   dataSource: EdicaoDisciplinaModel[];
 
-  constructor(protected evaluationService: DisciplinEditionService) { }
+  constructor(protected evaluationService: DisciplinEditionService, protected router: Router) { }
 
   ngOnInit() {
     //this.DisciplinEditionService.getAllEditions().subscribe(
@@ -39,4 +40,7 @@ export class EdicaoDisciplinaComponent implements OnInit {
     this.dataSource = ELEMENT_DATA;
   }
 
+  onClickCreate() {
+    this.router.navigateByUrl("/create");
+  }
 }

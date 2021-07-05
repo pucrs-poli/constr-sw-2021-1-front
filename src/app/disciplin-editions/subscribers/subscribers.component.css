@@ -1,0 +1,23 @@
+.subscribers-titulo {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 34px;
+  line-height: 36px;
+}
+
+.subscribers-icone {
+  color: orange;
+  font-size: 35px;
+  margin-right: 1rem;
+}
+
+.subscribers-titulo-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 16px;
+}
+
+.subscribers-table-container {
+  display: flex;
+  justify-content: center;
+}

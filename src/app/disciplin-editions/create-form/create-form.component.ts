@@ -1,11 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+
 @Component({
-  selector: 'app-edit-form',
-  templateUrl: './edit-form.component.html',
-  styleUrls: ['./edit-form.component.css']
+  selector: 'app-create-form',
+  templateUrl: './create-form.component.html',
+  styleUrls: ['./create-form.component.css']
 })
-export class EditFormComponent implements OnInit {
+export class CreateFormComponent implements OnInit {
 
   item: any;
 
@@ -15,10 +16,6 @@ export class EditFormComponent implements OnInit {
    }
 
   ngOnInit(): void {
-  }
-
-  onClickCreate() {
-    this.router.navigateByUrl("/create");
   }
 
   onClickMenu() {
