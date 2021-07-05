@@ -18,6 +18,7 @@ import { ReservationTableComponent } from './components/reservation-table/reserv
 import { ResourcesPageComponent } from './pages/resources-page/resources-page.component';
 import { EditResourcePageComponent } from './pages/edit-resource-page/edit-resource-page.component';
 import { EditReservationPageComponent } from './pages/edit-reservation-page/edit-reservation-page.component';
+import { AddResourcePageComponent } from './pages/add-resource-page/add-resource-page.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { EditReservationPageComponent } from './pages/edit-reservation-page/edit
     ReservationTableComponent,
     ResourcesPageComponent,
     EditResourcePageComponent,
-    EditReservationPageComponent
+    EditReservationPageComponent,
+    AddResourcePageComponent
   ],
   imports: [
     SharedModule,
