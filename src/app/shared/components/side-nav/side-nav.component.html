@@ -1,0 +1,64 @@
+<mat-drawer-container class="example-container background" autosize>
+    <mat-drawer [opened]="showSideNav" mode="side" class="mat-drawer background">
+        <mat-list class="mat-list">
+            <div class="side-option" [style.background-color]="selectedButton === 'Predios' ? '#5D707F' : ''" (click)="onSelect('Predios')">
+                <mat-icon class="mat-icon" [style.color]="selectedButton === 'Predios' ? 'white' : ''">domain</mat-icon>
+                <a mat-button [style.color]="selectedButton === 'Predios' ? '#F18F01' : ''">
+                    Prédios e salas
+                </a>
+            </div>
+            <mat-divider></mat-divider>
+            <div class="side-option" [style.background-color]="selectedButton === 'Disciplinas' ? '#5D707F' : ''" (click)="onSelect('Disciplinas')">
+                <mat-icon class="mat-icon" [style.color]="selectedButton === 'Disciplinas' ? 'white' : ''">layers</mat-icon>
+                <a mat-button [style.color]="selectedButton === 'Disciplinas' ? '#F18F01' : ''">
+                    Disciplinas
+                </a>
+            </div>
+            <mat-divider></mat-divider>
+            <div class="side-option" [style.background-color]="selectedButton === 'Aulas' ? '#5D707F' : ''" (click)="onSelect('Aulas')">
+                <mat-icon class="mat-icon" [style.color]="selectedButton === 'Aulas' ? 'white' : ''">auto_stories</mat-icon>
+                <a mat-button [style.color]="selectedButton === 'Aulas' ? '#F18F01' : ''">
+                    Aulas
+                </a>
+            </div>
+            <mat-divider></mat-divider>
+            <div class="side-option" [style.background-color]="selectedButton === 'disciplin-editions' ? '#5D707F' : ''" (click)="onSelect('disciplin-editions')">
+                <mat-icon class="mat-icon" [style.color]="selectedButton === 'disciplin-editions' ? 'white' : ''">insert_invitation</mat-icon>
+                <a mat-button [style.color]="selectedButton === 'disciplin-editions' ? '#F18F01' : ''">
+                    Edições e disciplinas
+                </a>
+            </div>
+            <mat-divider></mat-divider>
+            <div class="side-option" [style.background-color]="selectedButton === 'evaluations' ? '#5D707F' : ''" (click)="onSelect('evaluations')">
+                <mat-icon class="mat-icon" [style.color]="selectedButton === 'evaluations' ? 'white' : ''">edit_note</mat-icon>
+                <a mat-button [style.color]="selectedButton === 'evaluations' ? '#F18F01' : ''">
+                    Avaliações
+                </a>
+            </div>
+            <mat-divider></mat-divider>
+            <div class="side-option" [style.background-color]="selectedButton === 'Recursos' ? '#5D707F' : ''" (click)="onSelect('Recursos')">
+                <mat-icon class="mat-icon" [style.color]="selectedButton === 'Recursos' ? 'white' : ''">insert_chart</mat-icon>
+                <a mat-button [style.color]="selectedButton === 'Recursos' ? '#F18F01' : ''">
+                    Recursos
+                </a>
+            </div>
+            <mat-divider></mat-divider>
+            <div class="side-option" [style.background-color]="selectedButton === 'Alunos' ? '#5D707F' : ''" (click)="onSelect('Alunos')">
+                <mat-icon class="mat-icon" [style.color]="selectedButton === 'Alunos' ? 'white' : ''">school</mat-icon>
+                <a mat-button [style.color]="selectedButton === 'Alunos' ? '#F18F01' : ''">
+                    Alunos
+                </a>
+            </div>
+            <mat-divider></mat-divider>
+            <div class="side-option" [style.background-color]="selectedButton === 'Curriculos' ? '#5D707F' : ''" (click)="onSelect('Curriculos')">
+                <mat-icon class="mat-icon" [style.color]="selectedButton === 'Curriculos' ? 'white' : ''">insert_drive_file</mat-icon>
+                <a mat-button [style.color]="selectedButton === 'Curriculos' ? '#F18F01' : ''">
+                    Currículos
+                </a>
+            </div>
+        </mat-list>
+    </mat-drawer>
+    <mat-drawer-content class="content">
+        <ng-content></ng-content>
+    </mat-drawer-content>
+</mat-drawer-container>

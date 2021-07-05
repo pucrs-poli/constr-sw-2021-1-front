@@ -1,0 +1,16 @@
+<div class="mat-elevation-z8 full-width-table">
+    <mat-accordion *ngFor="let question of questions; let i = index">
+        <mat-expansion-panel class="mat-expansion-panel" (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+            <mat-expansion-panel-header>
+                <mat-panel-title>
+                    <div class="mat-panel-title-div">
+                        <p>Questão {{ i+1 }}</p>
+                        <p>{{ question.title }}</p>
+                    </div>
+                </mat-panel-title>
+            </mat-expansion-panel-header>
+            <p>{{ question.title }}</p>
+            <p *ngFor="let option of question.options; let j = index">{{j}}. {{ option }}</p>
+        </mat-expansion-panel>
+    </mat-accordion>
+</div>

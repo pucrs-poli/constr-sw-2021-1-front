@@ -1,0 +1,11 @@
+<div>
+    <div class="edicoes-disciplina-titulo-container">
+        <mat-icon aria-hidden="false" aria-label="Example home icon" class="edicoes-disciplina-icone">drive_file_rename_outline
+        </mat-icon>
+        <div class="edicoes-disciplina-titulo">Edições de disciplina</div>
+    </div>
+    <div class="edicoes-disciplina-table-container">
+        <app-edicao-disciplinas-table [dataSource]="dataSource"></app-edicao-disciplinas-table>
+    </div>
+</div>
+<app-primary-button [text]="'CRIAR'"></app-primary-button>

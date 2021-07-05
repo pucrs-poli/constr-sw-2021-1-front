@@ -1,0 +1,12 @@
+<div>
+    <div class="question-titulo-container">
+        <mat-icon aria-hidden="false" aria-label="Example home icon" class="question-icone">
+            edit_note
+        </mat-icon>
+        <div class="question-titulo">Questões - Testes {{ name }}</div>
+    </div>
+    <div class="question-table-container">
+        <app-questions-expansion [questions]="questions"></app-questions-expansion>
+    </div>
+    <app-primary-button [text]="'CRIAR'"></app-primary-button>
+</div>

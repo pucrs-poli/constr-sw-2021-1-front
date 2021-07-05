@@ -1,41 +1,39 @@
-import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { NgModule } from '@angular/core';
+import { RouterModule } from '@angular/router';
+import { CommonModule } from '@angular/common';
 
-import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { CreateEdicaoDisciplinaComponent } from './create-edicao-disciplina/create-edicao-disciplina.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MatFormFieldModule } from '@angular/material/form-field';
-import { MatSelectModule } from '@angular/material/select';
-import { MatButtonModule } from '@angular/material/button';
-import { MatInputModule } from '@angular/material/input';
+import {MatIconModule} from '@angular/material/icon';
 import { MatTableModule } from '@angular/material/table';
-import { EditEdicaoDisciplinaComponent } from './edit-edicao-disciplina/edit-edicao-disciplina.component';
-import { ListEdicaoDisciplinaComponent } from './list-edicao-disciplina/list-edicao-disciplina.component';
-import { ListStudentsDisciplinaComponent } from './list-students-disciplina/list-students-disciplina.component';
-import { ListStudentsDataComponent } from './list-students-data/list-students-data.component';
+import { MatPaginatorModule } from '@angular/material/paginator';
+import { MatSortModule } from '@angular/material/sort'
+
+import { EvaluationsModule } from './evaluations/evaluations.module';
+import { HomeComponent } from './home/home.component';
+import { SharedModule } from './shared/shared.module';
+import { AppRoutingModule } from './app-routing.module';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    CreateEdicaoDisciplinaComponent,
-    EditEdicaoDisciplinaComponent,
-    ListEdicaoDisciplinaComponent,
-    ListStudentsDisciplinaComponent,
-    ListStudentsDataComponent,
+    HomeComponent,
   ],
   imports: [
-    BrowserModule,
+    CommonModule,
     AppRoutingModule,
+    EvaluationsModule,
+    BrowserModule,
     BrowserAnimationsModule,
-    MatFormFieldModule,
-    MatSelectModule,
-    MatButtonModule,
-    MatInputModule,
-    MatTableModule
+    SharedModule,
+    RouterModule,
+    MatIconModule,
+    MatTableModule,
+    MatPaginatorModule,
+    MatSortModule
   ],
-
   providers: [],
   bootstrap: [AppComponent]
 })

@@ -1,0 +1,23 @@
+.edicoes-disciplina-titulo {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 34px;
+    line-height: 36px;
+}
+
+.edicoes-disciplina-icone {
+    color: orange;
+    font-size: 35px;
+    margin-right: 1rem;
+}
+
+.edicoes-disciplina-titulo-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 16px;
+}
+
+.edicoes-disciplina-table-container {
+    display: flex;
+    justify-content: center;
+}
