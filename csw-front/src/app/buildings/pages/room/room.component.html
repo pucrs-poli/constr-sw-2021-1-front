@@ -1,0 +1,39 @@
+<div class="container">
+  <form>
+    <div class="titulo-container">
+      <div id='title' class="titulo">Sala (numero)</div>
+    </div>
+    <div class="input">
+      <mat-form-field appearance="fill">
+        <mat-label>Capacidade máxima</mat-label>
+        <input id="capacity-input-room" matInput type="number" disabled>
+      </mat-form-field>
+      <mat-form-field class="sideInput" appearance="fill">
+        <mat-label>Prédio</mat-label>
+        <input id="building-input-room" matInput disabled type="number">
+      </mat-form-field>
+    </div>
+    <div class="input">
+      <mat-form-field appearance="fill">
+        <mat-label>Tipo</mat-label>
+        <input id="type-input-room" matInput disabled type="text">
+      </mat-form-field>
+      <mat-form-field class="sideInput" appearance="fill">
+        <mat-label>Descrição</mat-label>
+        <input id="description-input-room" matInput disabled type="text">
+      </mat-form-field>
+    </div>
+  </form>
+
+  <div class="example-button-row">
+    <div class="example-flex-container">
+      <div class="example-button-container">
+        <button mat-fab (click)="clickButton()" type='button' class="button-salvar">
+          <mat-icon class="salvar-icon">create</mat-icon>
+          <span class="">Editar</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+</div>

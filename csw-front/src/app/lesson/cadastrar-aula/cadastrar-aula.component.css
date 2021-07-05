@@ -1,0 +1,63 @@
+.container {
+    width: 50%;
+    margin-left: 25%;
+}
+
+.logo {
+    width: 36px; 
+    height: 36px;
+}
+
+.titulo {
+    font-size: 34px; 
+    margin-left: 10px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.subtitulo {
+    font-size: 25px; 
+    color: #5d707f;
+    margin-left: 6%;
+    margin-bottom: 50px;
+}
+
+section {
+    width: 20%;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  section .button-aula {
+    background: #F18F01;
+    padding: 8px 16px;
+    border-radius: 30px;
+    justify-content: center;
+  }
+
+  .disciplinas-titulo {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 34px;
+    line-height: 36px;
+}
+
+.disciplinas-icone {
+    color: orange;
+    font-size: 35px;
+    margin-right: 1rem;
+}
+
+.disciplinas-titulo-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 16px;
+}
+
+.disciplinas-table-container {
+    display: flex;
+    justify-content: center;
+}
+
+
+
