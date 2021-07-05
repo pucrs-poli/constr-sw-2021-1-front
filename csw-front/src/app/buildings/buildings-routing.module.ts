@@ -5,6 +5,8 @@ import {BuildingDetailComponent} from './pages/building-detail/building-detail.c
 import {RoomComponent} from './pages/room/room.component';
 import {BuildingsListComponent} from './pages/buildings-list/buildings-list.component';
 import {XComponent} from './x/x.component';
+import { BuildingEditComponent } from './pages/building-edit/building-edit.component';
+import { RoomEditComponent } from './pages/room-edit/room-edit.component';
 
 const routes: Routes = [
   {
@@ -22,7 +24,9 @@ const routes: Routes = [
   {
     path: 'x',
     component: XComponent,
-  }
+  },
+  { path: 'edit', component: BuildingEditComponent },
+  { path: 'room/edit', component: RoomEditComponent },
 ];
 
 @NgModule({

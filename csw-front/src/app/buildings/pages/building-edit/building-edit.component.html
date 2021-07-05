@@ -1,0 +1,57 @@
+<div class="container">
+  <form>
+    <div class="predio-titulo-container">
+      <mat-icon aria-hidden="false" aria-label="Example home icon" class="predio-icone">drive_file_rename_outline
+      </mat-icon>
+      <div class="predio-titulo">Criar/Editar Predio</div>
+    </div>
+    <div class="input">
+      <mat-form-field class="example-form-field" appearance="fill">
+        <mat-label>Nome do prédio</mat-label>
+        <input id="name-input" matInput (change)="changeName($event)" type="text">
+        <button matSuffix mat-icon-button aria-label="Clear" (click)="clear('name-input')">
+          <mat-icon>close</mat-icon>
+        </button>
+      </mat-form-field>
+    </div>
+    <div class="input">
+      <mat-form-field class="example-form-field" appearance="fill">
+        <mat-label>Capacidade máxima</mat-label>
+        <input id="capacity-input" matInput (change)="changeCapacity($event)" type="number">
+        <button matSuffix mat-icon-button aria-label="Clear" (click)="clear('capacity-input')">
+          <mat-icon>close</mat-icon>
+        </button>
+      </mat-form-field>
+      <mat-form-field class="sideInput" appearance="fill">
+        <mat-label>Andar(es)</mat-label>
+        <input id="floor-input" matInput (change)="changeFloors($event)" type="number">
+        <button matSuffix mat-icon-button aria-label="Clear" (click)="clear('floor-input')">
+          <mat-icon>close</mat-icon>
+        </button>
+      </mat-form-field>
+    </div>
+    <div class="input">
+      <mat-form-field class="example-form-field" appearance="fill">
+        <mat-label>Descrição</mat-label>
+        <input id="description-input" matInput (change)="changeDescription($event)" type="text">
+        <button matSuffix mat-icon-button aria-label="Clear" (click)="clear('description-input')">
+          <mat-icon>close</mat-icon>
+        </button>
+      </mat-form-field>
+    </div>
+
+  </form>
+
+  <div class="example-button-row">
+    <div class="example-flex-container">
+      <div class="example-button-container">
+        <button mat-fab (click)="clickButton()" type='button' class="button-salvar" >
+          <mat-icon class="salvar-icon">check_circle</mat-icon>
+          <span class="">Salvar</span>
+        </button>
+
+      </div>
+    </div>
+  </div>
+
+</div>

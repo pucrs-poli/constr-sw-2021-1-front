@@ -21,6 +21,10 @@ import { MatCardModule } from '@angular/material/card';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatButtonModule } from '@angular/material/button';
 import { LayoutModule } from '@angular/cdk/layout';
+import { BuildingsRoutingModule } from './buildings-routing.module';
+import { BuildingEditComponent } from './pages/building-edit/building-edit.component';
+import { RoomEditComponent } from './pages/room-edit/room-edit.component';
+import {MatInputModule} from '@angular/material/input';
 
 @NgModule({
   declarations: [
@@ -28,8 +32,12 @@ import { LayoutModule } from '@angular/cdk/layout';
     RoomComponent,
     BuildingsListComponent,
     XComponent,
+    BuildingEditComponent,
+    RoomEditComponent,
   ],
   imports: [
+    MatInputModule,
+    BuildingsRoutingModule,
     HttpClientModule,
     CommonModule,
     SharedModule,

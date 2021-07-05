@@ -9,12 +9,13 @@ import {MatIconModule} from '@angular/material/icon';
 import { MatTableModule } from '@angular/material/table';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatSortModule } from '@angular/material/sort'
-
+import {MatInputModule} from '@angular/material/input';
 import { EvaluationsModule } from './evaluations/evaluations.module';
 import { HomeComponent } from './home/home.component';
 import { SharedModule } from './shared/shared.module';
 import { AppRoutingModule } from './app-routing.module';
 import {BuildingsModule} from './buildings/buildings.module';
+
 
 @NgModule({
   declarations: [
@@ -33,6 +34,7 @@ import {BuildingsModule} from './buildings/buildings.module';
     MatIconModule,
     MatTableModule,
     MatPaginatorModule,
+    MatInputModule,
     MatSortModule
   ],
   providers: [],
