@@ -14,19 +14,17 @@ const routes: Routes = [
     component: BuildingsListComponent,
   },
   {
-    path: 'building/:id',
+    path: 'detail',
     component: BuildingDetailComponent,
   },
   {
-    path: 'building/:id/room/:id',
+    path: 'room',
     component: RoomComponent,
   },
-  {
-    path: 'x',
-    component: XComponent,
-  },
   { path: 'edit', component: BuildingEditComponent },
-  { path: 'room/edit', component: RoomEditComponent },
+  { path: 'create', component: BuildingEditComponent },
+  { path: 'room_create', component: RoomEditComponent },
+  { path: 'room_edit', component: RoomEditComponent },
 ];
 
 @NgModule({

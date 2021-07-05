@@ -6,7 +6,7 @@
       <div class="predio-titulo">Criar/Editar Predio</div>
     </div>
     <div class="input">
-      <mat-form-field class="example-form-field" appearance="fill">
+      <mat-form-field appearance="fill">
         <mat-label>Nome do prédio</mat-label>
         <input id="name-input" matInput (change)="changeName($event)" type="text">
         <button matSuffix mat-icon-button aria-label="Clear" (click)="clear('name-input')">
@@ -15,7 +15,7 @@
       </mat-form-field>
     </div>
     <div class="input">
-      <mat-form-field class="example-form-field" appearance="fill">
+      <mat-form-field appearance="fill">
         <mat-label>Capacidade máxima</mat-label>
         <input id="capacity-input" matInput (change)="changeCapacity($event)" type="number">
         <button matSuffix mat-icon-button aria-label="Clear" (click)="clear('capacity-input')">
@@ -31,7 +31,7 @@
       </mat-form-field>
     </div>
     <div class="input">
-      <mat-form-field class="example-form-field" appearance="fill">
+      <mat-form-field appearance="fill">
         <mat-label>Descrição</mat-label>
         <input id="description-input" matInput (change)="changeDescription($event)" type="text">
         <button matSuffix mat-icon-button aria-label="Clear" (click)="clear('description-input')">
@@ -49,7 +49,6 @@
           <mat-icon class="salvar-icon">check_circle</mat-icon>
           <span class="">Salvar</span>
         </button>
-
       </div>
     </div>
   </div>

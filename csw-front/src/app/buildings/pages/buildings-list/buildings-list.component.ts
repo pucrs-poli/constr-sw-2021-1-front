@@ -1,8 +1,6 @@
 import { AfterViewInit, Component, OnInit, ViewChild } from '@angular/core';
-import { MatPaginator } from '@angular/material/paginator';
-import { MatSort } from '@angular/material/sort';
-import { MatTable } from '@angular/material/table';
-import { BuildingsListDataSource, BuildingsListItem } from './buildings-list-datasource';
+import {MatList} from '@angular/material/list';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-buildings-list',
@@ -10,21 +8,51 @@ import { BuildingsListDataSource, BuildingsListItem } from './buildings-list-dat
   styleUrls: ['./buildings-list.component.css']
 })
 export class BuildingsListComponent implements AfterViewInit, OnInit {
-  @ViewChild(MatPaginator) paginator: MatPaginator;
-  @ViewChild(MatSort) sort: MatSort;
-  @ViewChild(MatTable) table: MatTable<BuildingsListItem>;
-  dataSource: BuildingsListDataSource;
+  // @ViewChild(MatList) table: MatTable<BuildingsListItem>;
+  items = [
+    '1',
+    '2',
+    '3',
+    '4',
+    '5',
+    '6',
+    '7',
+    '8',
+    '9',
+    '10',
+    '11',
+    '12',
+    '13',
+  ];
 
-  /** Columns displayed in the table. Columns IDs can be added, removed, or reordered. */
-  displayedColumns = ['id', 'name'];
+  constructor(protected router: Router,
+  ) {}
 
   ngOnInit() {
-    this.dataSource = new BuildingsListDataSource();
   }
 
   ngAfterViewInit() {
-    this.dataSource.sort = this.sort;
-    this.dataSource.paginator = this.paginator;
-    this.table.dataSource = this.dataSource;
+  }
+
+  showBuilding(id: string) {
+    this.router
+      .navigateByUrl('detail', {state: {id}})
+      .then(r => null);
+  }
+
+  createBuilding() {
+    this.router
+      .navigateByUrl('create')
+      .then(r => null);
+  }
+
+  editBuilding(link: string) {
+    this.router
+      .navigateByUrl('edit', {state: {id: 1}})
+      .then(r => null);
+   }
+
+  deleteBuilding(event: Event){
+    alert(`Você deletou Prédio 1.`);
   }
 }

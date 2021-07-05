@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./building-edit.component.css']
 })
 export class BuildingEditComponent implements OnInit {
-  value="teste";
+  value = 'teste';
   building = {
     id: 0,
     name: '',
@@ -44,21 +44,21 @@ export class BuildingEditComponent implements OnInit {
     console.log(this.building);
   }
 
-  clear(type: String): void{
-    var s ;
-       if (type=="name-input"){
-      s =  window.document.getElementById("name-input") as HTMLInputElement;
-    }else if (type=="capacity-input"){
-      s =  window.document.getElementById("capacity-input") as HTMLInputElement;
+  clear(type: string): void{
+    let s ;
+    if (type === 'name-input'){
+      s =  window.document.getElementById('name-input') as HTMLInputElement;
+    }else if (type === 'capacity-input'){
+      s =  window.document.getElementById('capacity-input') as HTMLInputElement;
     }
-    else if (type=="floor-input"){
-      s =  window.document.getElementById("floor-input") as HTMLInputElement;
+    else if (type === 'floor-input'){
+      s =  window.document.getElementById('floor-input') as HTMLInputElement;
     }
-    else if (type=="description-input"){
-      s =  window.document.getElementById("description-input") as HTMLInputElement;
+    else if (type === 'description-input'){
+      s =  window.document.getElementById('description-input') as HTMLInputElement;
     }
-    s.value=""
+    s.value = '';
   }
 
-  
+
 }
