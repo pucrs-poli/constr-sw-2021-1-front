@@ -4,6 +4,7 @@ import { MatDialog } from '@angular/material/dialog';
 
 import { TestModel } from '../models/test.model';
 import { FormTestsComponent } from '../form-tests/form-tests.component';
+import { EvaluationsService } from '../services/evaluations.service';
 
 @Component({
   selector: 'app-test',
@@ -14,9 +15,11 @@ export class TestComponent{
   
   subject: string;
   tests: TestModel[];
-  
+  test: TestModel;
+
   constructor(protected router: Router,
-              protected dialog: MatDialog) {
+              protected dialog: MatDialog,
+              protected evaluationService: EvaluationsService) {
     this.tests = this.router.getCurrentNavigation().extras.state.test;
     this.subject = this.router.getCurrentNavigation().extras.state.subject;
   }
@@ -27,8 +30,15 @@ export class TestComponent{
     });
 
     dialogRef.afterClosed().subscribe(result => {
-      console.log(`Dialog result: ${result}`);
+      this.test = result;
+      this.test.subjects = [this.subject];
+      this.test.results = [];
+      this.evaluationService.postTest(this.test).subscribe( test =>{
+        this.tests.push(test)
+      });
     });
+
+    
   }
 
 }

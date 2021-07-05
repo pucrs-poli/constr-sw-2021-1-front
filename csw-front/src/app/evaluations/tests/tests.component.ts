@@ -23,10 +23,10 @@ export class TestsComponent implements OnInit {
   constructor(protected evaluationService: EvaluationsService) { }
 
   ngOnInit() {
-    /* this.evaluationService.getAllTests().subscribe(
-      (tests: TestModel[]) => this.tests = tests
-    ) */
-  
-    this.tests = ELEMENT_DATA;
+    this.evaluationService.getAllTests().subscribe(
+      tests => {
+        this.tests = tests
+      }
+    )
   }
 }

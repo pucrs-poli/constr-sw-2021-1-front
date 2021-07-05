@@ -1,6 +1,7 @@
 import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { RouterModule } from '@angular/router';
 import { DisciplinasTableComponent } from './tests/components/disciplinas-table/disciplinas-table.component';
@@ -55,6 +56,8 @@ import { QuestionsFormComponent } from './form-tests/questions-form/questions-fo
     MatExpansionModule,
     MatDialogModule,
     MatInputModule,
+    FormsModule,
+    ReactiveFormsModule,
   ],
   providers: [
     EvaluationsService,

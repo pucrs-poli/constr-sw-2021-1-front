@@ -72,3 +72,20 @@
 .questions {
     margin-bottom: 8px;
 }
+
+::ng-deep .mat-form-field-wrapper {
+    margin-bottom: -1.25em;
+}
+
+.mat-form-field {
+    background-color: #EEF1EF;
+    border-radius: 5px;
+    padding: 4px;
+}
+
+.forms-options {
+    display: flex;
+    justify-content: space-between;
+    grid-template-columns: 1fr 1fr;
+    margin-bottom: 8px;
+}

@@ -12,13 +12,23 @@
             <mat-icon class="mat-icon-add">add</mat-icon>
         </button>
     </div>
+    <div class="forms-options">
+        <mat-form-field class="example-full-width" appearance="fill ">
+            <mat-label>Peso</mat-label>
+            <input [(ngModel)]="weight" matInput placeholder="Ex. 1.0">
+        </mat-form-field>
+        <mat-form-field class="example-full-width" appearance="fill ">
+            <mat-label>Duração em min:</mat-label>
+            <input [(ngModel)]="duration" matInput placeholder="60">
+        </mat-form-field>
+    </div>
 
     <div *ngFor="let question of questions; let i = index" class="questions">
-        <app-questions-form (questionDeleted)="questionDeleted(i)"></app-questions-form>
+        <app-questions-form (questionEmit)="receiveQuestion($event, i)" (questionDeleted)="questionDeleted(i)"></app-questions-form>
     </div>
 </mat-dialog-content>
 
 <mat-dialog-actions align="end">
     <button mat-button mat-dialog-close class="btn-cancel">Cancelar</button>
-    <button mat-button [mat-dialog-close]="true" cdkFocusInitial class="btn-confirm">Criar</button>
+    <button mat-button [mat-dialog-close]="createTest()" cdkFocusInitial class="btn-confirm">Criar</button>
 </mat-dialog-actions>

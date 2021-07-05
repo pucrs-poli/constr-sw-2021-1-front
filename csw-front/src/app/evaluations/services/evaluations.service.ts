@@ -15,4 +15,9 @@ export class EvaluationsService {
   getAllTests(): Observable<TestModel[]>{
     return this.httpClient.get<TestModel[]>(`${this.baseUrl}/tests`);
   }
+
+  postTest(test: TestModel): Observable<TestModel>{
+    console.log(test);
+    return this.httpClient.post<TestModel>(`${this.baseUrl}/tests`, test);
+  }
 }
