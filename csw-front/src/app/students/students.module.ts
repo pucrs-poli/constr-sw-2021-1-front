@@ -17,26 +17,42 @@ import {StudentsComponent} from './pages/students-page/students.component';
 import {SharedModule} from '../shared/shared.module';
 import {StudentTableComponent} from './components/students-table/student-table.component';
 import {EditStudentPageComponent} from './pages/edit-student-page/edit-student-page.component';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatSelectModule} from '@angular/material/select';
+import {MatInputModule} from '@angular/material/input';
+import {MatButtonModule} from '@angular/material/button';
+import {CreateStudentPageComponent} from './pages/create-student-page/create-student-page.component';
+import {ReactiveFormsModule} from '@angular/forms';
+import {MatDatepickerModule} from '@angular/material/datepicker';
+import {SubscriptionsTableComponent} from './components/subscriptions-table/subscriptions-table.component';
 
 @NgModule({
   declarations: [
     StudentsComponent,
     StudentTableComponent,
-    EditStudentPageComponent
+    EditStudentPageComponent,
+    CreateStudentPageComponent,
+    SubscriptionsTableComponent
   ],
   imports: [
+    SharedModule,
     StudentsRoutingModule,
+    MatToolbarModule,
+    MatIconModule,
+    MatInputModule,
+    MatSelectModule,
+    MatButtonModule,
+    MatTableModule,
     HttpClientModule,
     CommonModule,
-    SharedModule,
     RouterModule,
-    MatToolbarModule,
     MatSidenavModule,
-    MatIconModule,
-    MatTableModule,
     MatPaginatorModule,
     MatSortModule,
     MatExpansionModule,
+    MatFormFieldModule,
+    ReactiveFormsModule,
+    MatDatepickerModule
   ],
   providers: [],
   schemas: [

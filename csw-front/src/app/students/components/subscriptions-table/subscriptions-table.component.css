@@ -1,0 +1,16 @@
+table {
+  height: 60%;
+  overflow-y: auto;
+}
+
+.mat-table {
+  width: 100%;
+}
+
+button {
+  color: #5D707F;
+}
+
+i {
+  color: #B00020;
+}

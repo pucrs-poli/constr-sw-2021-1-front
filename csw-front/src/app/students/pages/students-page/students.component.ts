@@ -34,6 +34,11 @@ export class StudentsComponent implements OnInit {
 
   constructor() { }
 
+  // tslint:disable-next-line:typedef
+  create() {
+
+  }
+
   ngOnInit(): void {
   }
 

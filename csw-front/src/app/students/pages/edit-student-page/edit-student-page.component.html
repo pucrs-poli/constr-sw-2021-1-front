@@ -11,52 +11,94 @@
 </head>
 
 <body>
-  <div>
-    <div class="meio">
+<div>
+  <div class="meio">
 
-      <div class="wrapper">
+    <div class="wrapper">
+      <div class="container">
         <div>
-          <h1 class="title">Editar Recurso</h1>
+          <h1 class="title">Editar Aluno</h1>
         </div>
-        <div class="posicaodiv">
-          <form class="example-form">
+        <div>
+          <div class="posicaodiv" *ngIf="student">
+            <form [formGroup]="studentForm" class="example-form">
+              <mat-form-field class="example-full-width" appearance="fill">
+                <mat-label>ID</mat-label>
+                <input matInput value="{{student.idStudent}}" readonly />
+              </mat-form-field>
+            </form>
+
+            <form [formGroup]="studentForm" class="example-form">
+              <mat-form-field class="example-full-width" appearance="fill">
+                <mat-label>Nome</mat-label>
+                <input matInput formControlName="name" />
+              </mat-form-field>
+            </form>
+
+            <form [formGroup]="studentForm" class="example-form">
+              <mat-form-field class="example-full-width" appearance="fill">
+                <mat-label>CPF</mat-label>
+                <input matInput value="{{student.cpf}}" readonly />
+              </mat-form-field>
+            </form>
+
+            <form [formGroup]="studentForm" class="example-form">
+              <mat-form-field class="example-full-width" appearance="fill">
+                <mat-label>Data de Aniversário</mat-label>
+                <input matInput value="{{student.birthDate}}" readonly />
+              </mat-form-field>
+            </form>
+
+            <form [formGroup]="studentForm" class="example-form">
+              <mat-form-field class="example-full-width" appearance="fill">
+                <mat-label>Endereço</mat-label>
+                <input matInput formControlName="address" />
+              </mat-form-field>
+            </form>
+          </div>
+
+          <section>
+            <button mat-raised-button class="primary-button_resources" (click)="back()">Voltar</button>
+            <button mat-raised-button class="primary-button_resources" (click)="save()">Salvar</button>
+          </section>
+        </div>
+      </div>
+      <div class="container">
+        <div>
+          <h1 class="title">Adicionar Inscrição</h1>
+        </div>
+        <div class="posicaodiv" style="display: flex;">
+          <form [formGroup]="subscriptionForm" class="example-form" style="margin-right: 10px;">
             <mat-form-field class="example-full-width" appearance="fill">
-              <mat-label>ID</mat-label>
-              <input matInput />
+              <mat-label>Código</mat-label>
+              <input matInput formControlName="code" />
             </mat-form-field>
           </form>
 
-          <form class="example-form">
+          <form [formGroup]="subscriptionForm" class="example-form">
             <mat-form-field class="example-full-width" appearance="fill">
-              <mat-label>Nome</mat-label>
-              <input matInput />
+              <mat-label>Edição</mat-label>
+              <input matInput formControlName="edition" />
             </mat-form-field>
           </form>
 
-          <form class="example-form">
-            <mat-form-field class="example-full-width" appearance="fill">
-              <mat-label>Tipo</mat-label>
-              <input matInput />
-            </mat-form-field>
-          </form>
-
-          <form class="example-form">
-            <mat-form-field class="example-full-width" appearance="fill">
-              <mat-label>Descrição</mat-label>
-              <input matInput />
-            </mat-form-field>
-          </form>
+          <div class="button">
+            <button mat-button (click)="subscribe()">
+              <mat-icon>add_box</mat-icon>
+            </button>
+          </div>
         </div>
 
-        <section>
-          <button mat-raised-button class="primary-button_resources">Cancelar</button>
-          <button mat-raised-button class="primary-button_resources">Salvar</button>
-        </section>
+        <div>
+          <app-subscriptions-table [idStudent]="idStudent"></app-subscriptions-table>
+        </div>
+
       </div>
     </div>
   </div>
+</div>
 
-  <router-outlet></router-outlet>
+<router-outlet></router-outlet>
 
 </body>
 

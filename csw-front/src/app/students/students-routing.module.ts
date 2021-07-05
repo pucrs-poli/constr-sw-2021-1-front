@@ -1,8 +1,9 @@
-import { NgModule } from "@angular/core";
-import { RouterModule, Routes } from "@angular/router";
+import { NgModule } from '@angular/core';
+import { RouterModule, Routes } from '@angular/router';
 
 import {StudentsComponent} from './pages/students-page/students.component';
 import {EditStudentPageComponent} from './pages/edit-student-page/edit-student-page.component';
+import {CreateStudentPageComponent} from './pages/create-student-page/create-student-page.component';
 
 const routes: Routes = [
   {
@@ -12,6 +13,10 @@ const routes: Routes = [
   {
     path: 'edit/:id',
     component: EditStudentPageComponent
+  },
+  {
+    path: 'create',
+    component: CreateStudentPageComponent
   },
 ];
 
