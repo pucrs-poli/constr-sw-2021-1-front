@@ -8,6 +8,6 @@
     <div class="test-table-container">
         <app-test-table [tests]="tests"></app-test-table>
     </div>
-    <app-primary-button [text]="'CRIAR'" (onClickedButton)="onClickPrimaryButton($event)">
-    </app-primary-button>
 </div>
+<app-primary-button [text]="'CRIAR'" (onClickedButton)="openDialogTests()">
+</app-primary-button>

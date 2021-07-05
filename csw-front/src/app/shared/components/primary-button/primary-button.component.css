@@ -6,3 +6,8 @@
     padding: 8px 16px;
     border-radius: 30px;
 }
+
+.primary-button:hover {
+    background: orangered;
+    color: white;
+}

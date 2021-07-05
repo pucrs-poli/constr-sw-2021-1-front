@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+
 import { TestModel } from '../models/test.model';
 import { EvaluationsService } from '../services/evaluations.service';
 
@@ -24,14 +25,8 @@ export class TestsComponent implements OnInit {
   ngOnInit() {
     /* this.evaluationService.getAllTests().subscribe(
       (tests: TestModel[]) => this.tests = tests
-    )
-   */
-
-    /* this.evaluationService.getApi().subscribe(
-      (value) => console.log(value),
     ) */
-
+  
     this.tests = ELEMENT_DATA;
   }
-
 }

@@ -11,6 +11,8 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatIconModule } from '@angular/material/icon';
 import { MatTableModule } from '@angular/material/table';
 import { MatExpansionModule } from '@angular/material/expansion';
+import { MatDialogModule } from '@angular/material/dialog';
+import { MatInputModule } from '@angular/material/input';
 
 import { TestsComponent } from './tests/tests.component';
 import { EvaluationsService } from './services/evaluations.service';
@@ -23,6 +25,7 @@ import { ResultsTableComponent } from './results/components/results-table/result
 import { QuestionsComponent } from './questions/questions.component';
 import { QuestionsExpansionComponent } from './questions/components/questions-expansion/questions-expansion.component';
 import { FormTestsComponent } from './form-tests/form-tests.component';
+import { QuestionsFormComponent } from './form-tests/questions-form/questions-form.component';
 
 @NgModule({
   declarations: [
@@ -35,6 +38,7 @@ import { FormTestsComponent } from './form-tests/form-tests.component';
     QuestionsComponent,
     QuestionsExpansionComponent,
     FormTestsComponent,
+    QuestionsFormComponent,
   ],
   imports: [
     EvaluationsRoutingModule,
@@ -49,6 +53,8 @@ import { FormTestsComponent } from './form-tests/form-tests.component';
     MatPaginatorModule,
     MatSortModule,
     MatExpansionModule,
+    MatDialogModule,
+    MatInputModule,
   ],
   providers: [
     EvaluationsService,

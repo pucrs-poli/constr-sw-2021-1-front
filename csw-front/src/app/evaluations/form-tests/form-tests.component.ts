@@ -1,5 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Inject, OnInit } from '@angular/core';
+import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { Router } from '@angular/router';
+import { QuestionModel } from '../models/question.model';
 
 @Component({
   selector: 'app-form-tests',
@@ -8,13 +10,21 @@ import { Router } from '@angular/router';
 })
 export class FormTestsComponent implements OnInit {
 
-  subject: string;
+  questions: QuestionModel[] = [];
 
-  constructor(protected router: Router) {
-    this.subject = this.router.getCurrentNavigation().extras.state.subject;
+  constructor(private dialogRef: MatDialogRef<FormTestsComponent>,
+    @Inject(MAT_DIALOG_DATA) public data: String) {
    }
 
   ngOnInit(): void {
+  }
+
+  onClickAdd(){
+    this.questions.push(new QuestionModel());
+  }
+
+  questionDeleted(index){
+    this.questions.splice(index, 1);
   }
 
 }
