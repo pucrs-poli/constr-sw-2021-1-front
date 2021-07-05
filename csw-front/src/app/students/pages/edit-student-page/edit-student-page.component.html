@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title></title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="">
+</head>
+
+<body>
+<div>
+  <div class="meio">
+
+    <div class="wrapper">
+      <div class="container">
+        <div>
+          <h1 class="title">Editar Aluno</h1>
+        </div>
+        <div>
+          <div class="posicaodiv" *ngIf="student">
+            <form [formGroup]="studentForm" class="example-form">
+              <mat-form-field class="example-full-width" appearance="fill">
+                <mat-label>ID</mat-label>
+                <input matInput value="{{student.idStudent}}" readonly />
+              </mat-form-field>
+            </form>
+
+            <form [formGroup]="studentForm" class="example-form">
+              <mat-form-field class="example-full-width" appearance="fill">
+                <mat-label>Nome</mat-label>
+                <input matInput formControlName="name" />
+              </mat-form-field>
+            </form>
+
+            <form [formGroup]="studentForm" class="example-form">
+              <mat-form-field class="example-full-width" appearance="fill">
+                <mat-label>CPF</mat-label>
+                <input matInput value="{{student.cpf}}" readonly />
+              </mat-form-field>
+            </form>
+
+            <form [formGroup]="studentForm" class="example-form">
+              <mat-form-field class="example-full-width" appearance="fill">
+                <mat-label>Data de Aniversário</mat-label>
+                <input matInput value="{{student.birthDate}}" readonly />
+              </mat-form-field>
+            </form>
+
+            <form [formGroup]="studentForm" class="example-form">
+              <mat-form-field class="example-full-width" appearance="fill">
+                <mat-label>Endereço</mat-label>
+                <input matInput formControlName="address" />
+              </mat-form-field>
+            </form>
+          </div>
+
+          <section>
+            <button mat-raised-button class="primary-button_resources" (click)="back()">Voltar</button>
+            <button mat-raised-button class="primary-button_resources" (click)="save()">Salvar</button>
+          </section>
+        </div>
+      </div>
+      <div class="container">
+        <div>
+          <h1 class="title">Adicionar Inscrição</h1>
+        </div>
+        <div class="posicaodiv" style="display: flex;">
+          <form [formGroup]="subscriptionForm" class="example-form" style="margin-right: 10px;">
+            <mat-form-field class="example-full-width" appearance="fill">
+              <mat-label>Código</mat-label>
+              <input matInput formControlName="code" />
+            </mat-form-field>
+          </form>
+
+          <form [formGroup]="subscriptionForm" class="example-form">
+            <mat-form-field class="example-full-width" appearance="fill">
+              <mat-label>Edição</mat-label>
+              <input matInput formControlName="edition" />
+            </mat-form-field>
+          </form>
+
+          <div class="button">
+            <button mat-button (click)="subscribe()">
+              <mat-icon>add_box</mat-icon>
+            </button>
+          </div>
+        </div>
+
+        <div>
+          <app-subscriptions-table [idStudent]="idStudent"></app-subscriptions-table>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+<router-outlet></router-outlet>
+
+</body>
+
+</html>

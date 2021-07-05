@@ -1,9 +1,9 @@
 <mat-drawer-container class="example-container background" autosize>
     <mat-drawer [opened]="showSideNav" mode="side" class="mat-drawer background">
         <mat-list class="mat-list">
-            <div class="side-option" [style.background-color]="selectedButton === 'Predios' ? '#5D707F' : ''" (click)="onSelect('Predios')">
-                <mat-icon class="mat-icon" [style.color]="selectedButton === 'Predios' ? 'white' : ''">domain</mat-icon>
-                <a mat-button [style.color]="selectedButton === 'Predios' ? '#F18F01' : ''">
+            <div class="side-option" [style.background-color]="selectedButton === 'buildings' ? '#5D707F' : ''" (click)="onSelect('buildings')">
+                <mat-icon class="mat-icon" [style.color]="selectedButton === 'buildings' ? 'white' : ''">domain</mat-icon>
+                <a mat-button [style.color]="selectedButton === 'buildings' ? '#F18F01' : ''">
                     Prédios e salas
                 </a>
             </div>
@@ -36,14 +36,14 @@
                 </a>
             </div>
             <mat-divider></mat-divider>
-            <div class="side-option" [style.background-color]="selectedButton === 'Recursos' ? '#5D707F' : ''" (click)="onSelect('resources')">
-                <mat-icon class="mat-icon" [style.color]="selectedButton === 'Recursos' ? 'white' : ''">insert_chart</mat-icon>
-                <a mat-button [style.color]="selectedButton === 'Recursos' ? '#F18F01' : ''">
+            <div class="side-option" [style.background-color]="selectedButton === 'resources' ? '#5D707F' : ''" (click)="onSelect('resources')">
+                <mat-icon class="mat-icon" [style.color]="selectedButton === 'resources' ? 'white' : ''">insert_chart</mat-icon>
+                <a mat-button [style.color]="selectedButton === 'resources' ? '#F18F01' : ''">
                     Recursos
                 </a>
             </div>
             <mat-divider></mat-divider>
-            <div class="side-option" [style.background-color]="selectedButton === 'Alunos' ? '#5D707F' : ''" (click)="onSelect('Alunos')">
+            <div class="side-option" [style.background-color]="selectedButton === 'Alunos' ? '#5D707F' : ''" (click)="onSelect('students')">
                 <mat-icon class="mat-icon" [style.color]="selectedButton === 'Alunos' ? 'white' : ''">school</mat-icon>
                 <a mat-button [style.color]="selectedButton === 'Alunos' ? '#F18F01' : ''">
                     Alunos
