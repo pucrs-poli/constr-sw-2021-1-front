@@ -9,8 +9,8 @@
     <div class="input">
       <mat-form-field class="example-form-field" appearance="fill">
         <mat-label>Número da sala</mat-label>
-        <input id="name-input" matInput (change)="changeNumber($event)" type="number">
-        <button matSuffix mat-icon-button aria-label="Clear" (click)="clear('name-input')">
+        <input id="room-number-input" matInput (change)="changeNumber($event)" type="number">
+        <button matSuffix mat-icon-button aria-label="Clear" (click)="clear('room-number-input')">
           <mat-icon>close</mat-icon>
         </button>
       </mat-form-field>
@@ -18,15 +18,15 @@
     <div class="input">
       <mat-form-field class="example-form-field" appearance="fill">
         <mat-label>Capacidade máxima</mat-label>
-        <input id="capacity-input" matInput (change)="changeCapacity($event)" type="number">
-        <button matSuffix mat-icon-button aria-label="Clear" (click)="clear('capacity-input')">
+        <input id="room-capacity-input" matInput (change)="changeCapacity($event)" type="number">
+        <button matSuffix mat-icon-button aria-label="Clear" (click)="clear('room-capacity-input')">
           <mat-icon>close</mat-icon>
         </button>
       </mat-form-field>
       <mat-form-field class="sideInput" appearance="fill">
         <mat-label>Prédio</mat-label>
-        <input id="floor-input" matInput (change)="changeBuilding($event)" type="number">
-        <button matSuffix mat-icon-button aria-label="Clear" (click)="clear('floor-input')">
+        <input id="room-building-input" matInput (change)="changeBuilding($event)" type="number">
+        <button matSuffix mat-icon-button aria-label="Clear" (click)="clear('room-building-input')">
           <mat-icon>close</mat-icon>
         </button>
       </mat-form-field>
@@ -34,8 +34,8 @@
     <div class="input">
       <mat-form-field class="example-form-field" appearance="fill">
         <mat-label>Tipo</mat-label>
-        <input id="description-input" matInput (change)="changeType($event)" type="text">
-        <button matSuffix mat-icon-button aria-label="Clear" (click)="clear('description-input')">
+        <input id="room-type-input" matInput (change)="changeType($event)" type="text">
+        <button matSuffix mat-icon-button aria-label="Clear" (click)="clear('room-type-input')">
           <mat-icon>close</mat-icon>
         </button>
       </mat-form-field>

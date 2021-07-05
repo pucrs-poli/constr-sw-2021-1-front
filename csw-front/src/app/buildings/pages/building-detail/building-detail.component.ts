@@ -4,6 +4,7 @@ import { ActivatedRoute } from '@angular/router';
 import {Observable} from 'rxjs';
 import {BindingFlags} from '@angular/compiler/src/core';
 import {BindingType} from '@angular/compiler';
+import { RoomComponent } from '../room/room.component';
 
 @Component({
   selector: 'app-building-detail',
@@ -40,7 +41,13 @@ export class BuildingDetailComponent implements OnInit {
   }
 
   showRoom(id: string) {
-    this.router
+
+      RoomComponent.room.Number=parseInt(id);
+      RoomComponent.room.building=3;
+      RoomComponent.room.capacity=3;
+      RoomComponent.room.description=id;
+      RoomComponent.room.type="teste1";
+      this.router
       .navigateByUrl('room', {state: {id}})
       .then(r => null);
   }

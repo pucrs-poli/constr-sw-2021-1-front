@@ -43,7 +43,7 @@
 
   letter-spacing: 0.18px;
   /* Dark Electric Blue */
-  color: #5D707F;
+  color: #5d707f;
 }
 
 .list-tile {
@@ -89,17 +89,17 @@
   letter-spacing: 0.25px;
 
   /* Light Slate Gray */
-  color: #6D8A96;
+  color: #6d8a96;
 }
 
 .edit-action {
   /* Dark Electric Blue */
-  color: #5D707F;
+  color: #5d707f;
 }
 
 .delete-action {
   /* Error */
-  color: #B00020;
+  color: #b00020;
 }
 
 .extended-fab-button {
@@ -121,7 +121,7 @@
 
 .extended-fab-button .extended-fab-button__text {
   font-weight: 500;
-  letter-spacing: .1em;
+  letter-spacing: 0.1em;
   text-transform: uppercase;
 }
 
@@ -138,4 +138,8 @@
 
 .grid-tile .second {
   text-align: right;
+}
+
+.sideInput {
+  padding-left: 1rem;
 }
