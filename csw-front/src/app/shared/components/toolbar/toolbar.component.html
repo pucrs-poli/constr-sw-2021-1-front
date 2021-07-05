@@ -1,0 +1,15 @@
+<mat-toolbar class="mat-elevation-z4 background">
+    <button mat-icon-button (click)="onClick()">
+        <mat-icon>menu</mat-icon>
+    </button>
+    <span class="example-spacer"></span>
+    <button mat-icon-button class="mg-r" (click)="navigateToHomePage()">
+        <mat-icon>home</mat-icon>
+    </button>
+    <button mat-icon-button>
+        <mat-icon>account_circle</mat-icon>
+    </button>
+</mat-toolbar>
+<app-side-nav [showSideNav]="openedSideNav">
+    <ng-content></ng-content>
+</app-side-nav>

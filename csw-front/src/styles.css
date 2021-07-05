@@ -1,0 +1,45 @@
+/* You can add global styles to this file, and also import other style files */
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+button {
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
+.mg-r {
+    margin-right: 16px;
+}
+
+.mg-l {
+    margin-left: 16px;
+}
+
+.mg-b {
+    margin-bottom: 16px;
+}
+
+.mg-t {
+    margin-top: 16px;
+}
+
+.background {
+    background: #EEF1EF;
+}
+
+.full-width-table {
+    width: 730px;
+}
+
+table {
+    width: 100%;
+}

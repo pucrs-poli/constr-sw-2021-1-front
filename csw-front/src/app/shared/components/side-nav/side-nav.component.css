@@ -1,0 +1,32 @@
+.example-container {
+    width: 100%;
+    height: calc(100% - 69px);
+}
+
+.mat-list {
+    padding: 0;
+}
+
+.mat-drawer {
+    width: 250px;
+    box-shadow: 0px 16px 24px rgba(0, 0, 0, 0.14), 0px 6px 30px rgba(0, 0, 0, 0.12), 0px 8px 10px rgba(0, 0, 0, 0.2);
+}
+
+.side-option {
+    padding: 12px 16px;
+    display: flex;
+    width: 100%;
+    align-items: center;
+}
+
+.mat-icon {
+    margin-right: 16px;
+}
+
+.side-option:hover {
+    background: rgb(231, 231, 231);
+}
+
+.content {
+    padding: 16px;
+}

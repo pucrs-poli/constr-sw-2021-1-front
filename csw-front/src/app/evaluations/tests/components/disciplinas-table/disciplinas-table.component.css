@@ -1,0 +1,19 @@
+.disciplinas-collum-size-teste {
+    width: 126px;
+    text-align: center;
+}
+
+.disciplinas-table-title {
+    font-size: 18px;
+    color: gray;
+    border-bottom-width: 0px;
+}
+
+.disciplinas-table-line {
+    height: 70px;
+}
+
+.disciplinas-table-line:hover {
+    font-weight: bold;
+    cursor: pointer;
+}
