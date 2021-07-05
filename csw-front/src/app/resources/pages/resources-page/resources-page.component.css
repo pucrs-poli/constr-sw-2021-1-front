@@ -1,0 +1,23 @@
+.resources-title {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 34px;
+    line-height: 36px;
+}
+
+.resources-icon {
+    color: orange;
+    font-size: 35px;
+    margin-right: 1rem;
+}
+
+.resources-title-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 16px;
+}
+
+.resources-table-container {
+    display: flex;
+    justify-content: center;
+}

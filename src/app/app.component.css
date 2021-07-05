@@ -1,0 +1,24 @@
+.nav-spacer {
+  flex: 1 1 auto;
+}
+
+.list-tile-spacer {
+  flex: 1 1 auto;
+}
+
+.mat-nav-list .mat-list-item {
+  width: 304px;
+}
+
+.mat-drawer {
+  background: #EEF1EF;
+}
+
+.page-container {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #EEF1EF;
+}
