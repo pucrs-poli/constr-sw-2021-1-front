@@ -12,7 +12,7 @@
 
 <body>
   <div>
-    <div class="meio">
+    <div class="center">
 
       <div class="wrapper">
         <div>
@@ -42,7 +42,7 @@
                   </mat-option>
                 </mat-select>
             </mat-form-field>
-            <button>
+            <button routerLink="/resources/new_type">
               <mat-icon>create</mat-icon>
             </button>
           </div>
@@ -56,8 +56,8 @@
         </div>
 
         <section>
-          <button mat-raised-button class="primary-button_resources">Cancelar</button>
-          <button mat-raised-button class="primary-button_resources">Salvar</button>
+          <button routerLink=".." mat-raised-button class="primary-button_resources">Cancelar</button>
+          <button routerLink="/resources" mat-raised-button class="primary-button_resources">Salvar</button>
         </section>
       </div>
     </div>

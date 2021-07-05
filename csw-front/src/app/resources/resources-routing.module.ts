@@ -5,6 +5,7 @@ import { ResourcesPageComponent } from './pages/resources-page/resources-page.co
 import { EditResourcePageComponent } from './pages/edit-resource-page/edit-resource-page.component';
 import { EditReservationPageComponent } from './pages/edit-reservation-page/edit-reservation-page.component';
 import { AddResourcePageComponent } from './pages/add-resource-page/add-resource-page.component';
+import { AddTypePageComponent } from './pages/add-type-page/add-type-page.component';
 
 const routes: Routes = [
     {
@@ -18,6 +19,10 @@ const routes: Routes = [
     {
       path: 'new',
       component: AddResourcePageComponent
+    },
+    {
+      path: 'new_type',
+      component: AddTypePageComponent
     },
     {
       path: 'reservations/edit/:id',

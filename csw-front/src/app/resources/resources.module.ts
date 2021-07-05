@@ -19,6 +19,7 @@ import { ResourcesPageComponent } from './pages/resources-page/resources-page.co
 import { EditResourcePageComponent } from './pages/edit-resource-page/edit-resource-page.component';
 import { EditReservationPageComponent } from './pages/edit-reservation-page/edit-reservation-page.component';
 import { AddResourcePageComponent } from './pages/add-resource-page/add-resource-page.component';
+import { AddTypePageComponent } from './pages/add-type-page/add-type-page.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { AddResourcePageComponent } from './pages/add-resource-page/add-resource
     ResourcesPageComponent,
     EditResourcePageComponent,
     EditReservationPageComponent,
-    AddResourcePageComponent
+    AddResourcePageComponent,
+    AddTypePageComponent,
   ],
   imports: [
     SharedModule,
