@@ -18,8 +18,8 @@ export class BuildingEditComponent implements OnInit {
     description: '',
   };
   building2 ={
-    floors: 9,
-    name: "Prédio 55",
+    floors: 15,
+    name: "Prédio 345",
     description: "Escola Politécnica da PUCRS",
     maxCapacity: 2000
   }
@@ -31,7 +31,9 @@ export class BuildingEditComponent implements OnInit {
     this.building.description = '';
   }
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.getAllBuilding();
+  }
   changeName(event: Event): void {
     const element = event.currentTarget as HTMLInputElement;
     this.building.name = element.value;
@@ -54,7 +56,9 @@ export class BuildingEditComponent implements OnInit {
   }
   clickButton2() {
    // this.save()
-   // this.getAllBuilding();
+  // this.getAllBuilding();
+  // this.delete('60e4e69e1b094f00298141dd');
+  this.update('60e4e6901b094f00298141d9');
     //GET
   }
   getAllBuilding() {
@@ -69,6 +73,19 @@ export class BuildingEditComponent implements OnInit {
            //location.reload();
       });
       this.getAllBuilding();
+  }
+  delete(id:string){
+    this.http.delete(`${ this.apiURL }/buildings/${id}`)
+    .subscribe((result: any) => {
+      location.reload();
+ });
+
+  }
+  update(id:string){
+    this.http.put(`${ this.apiURL }/buildings/${id}`,this.building2)
+    .subscribe((result: any) => {
+      location.reload();
+ });
   }
 
   clear(type: string): void {
