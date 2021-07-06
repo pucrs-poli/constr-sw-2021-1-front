@@ -17,6 +17,12 @@ export class BuildingEditComponent implements OnInit {
     floors: 0,
     description: '',
   };
+  building2 ={
+    floors: 9,
+    name: "Prédio 55",
+    description: "Escola Politécnica da PUCRS",
+    maxCapacity: 2000
+  }
   constructor(public http: HttpClient) {
     this.building.id = 0;
     this.building.name = '';
@@ -47,7 +53,8 @@ export class BuildingEditComponent implements OnInit {
     console.log(this.building);
   }
   clickButton2() {
-    this.getAllBuilding();
+   // this.save()
+   // this.getAllBuilding();
     //GET
   }
   getAllBuilding() {
@@ -56,7 +63,13 @@ export class BuildingEditComponent implements OnInit {
       console.log(result);
     });
   }
-  
+  save() {
+    this.http.post(`${ this.apiURL }/buildings`, this.building2)
+      .subscribe((result: any) => {
+           //location.reload();
+      });
+      this.getAllBuilding();
+  }
 
   clear(type: string): void {
     let s;
