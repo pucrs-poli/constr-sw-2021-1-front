@@ -35,7 +35,7 @@ import {BuildingsModule} from './buildings/buildings.module';
     MatTableModule,
     MatPaginatorModule,
     MatInputModule,
-    MatSortModule
+    MatSortModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
