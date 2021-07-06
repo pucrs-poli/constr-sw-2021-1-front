@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import api from '../../api';
 
 @Component({
   selector: 'app-building-edit',
@@ -42,6 +43,12 @@ export class BuildingEditComponent implements OnInit {
   }
   clickButton() {
     console.log(this.building);
+  }
+  clickButton2() {
+
+
+//GET
+
   }
 
   clear(type: string): void{
