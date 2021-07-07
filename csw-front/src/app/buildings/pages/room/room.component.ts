@@ -1,51 +1,52 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { room } from '../../types';
 import { RoomEditComponent } from '../room-edit/room-edit.component';
 
 @Component({
   selector: 'app-room',
   templateUrl: './room.component.html',
-  styleUrls: ['./room.component.css']
+  styleUrls: ['./room.component.css'],
 })
 export class RoomComponent implements OnInit {
   static room = {
-    Number: 0,
-    building: 3,
-    description: 'lalala',
-    type: 'teste',
-    capacity: 5,
-  };
-  constructor(protected router: Router) {
-
-  }
+    number: 0,
+    buildingID: '',
+    description: '',
+    maxCapacity: 0,
+    type: '',
+    _id: '',
+  } as room;
+  constructor(protected router: Router) {}
 
   ngOnInit(): void {
-    var k = Object.keys(RoomComponent.room);
-    var v = Object.values(RoomComponent.room);
-    for (var i =0; i<k.length;i++){
-      if (i>0){
-      this.startValues(k[i],v[i]);
-    }else{
-      this.startTitle(v[i]);
-    }
-    }
+    this.startValues();
   }
-  startTitle(value):void{
-    let   v =  window.document.getElementById('title') as HTMLInputElement;
-    v.innerHTML='Sala '+value.toString();
+  startValues(): void {
+    var v1 = document.getElementById('room-title-up') as HTMLInputElement;
+    var v2 = document.getElementById('capacity-input-room') as HTMLInputElement;
+    var v3 = document.getElementById('building-input-room') as HTMLInputElement;
+    var v4 = document.getElementById('type-input-room') as HTMLInputElement;
+    var v5 = document.getElementById(
+      'description-input-room'
+    ) as HTMLInputElement;
+    v1.innerHTML = 'Sala ' + RoomComponent.room.number;
+    v2.value = RoomComponent.room.maxCapacity.toString();
+    v3.value = RoomComponent.room.buildingID.toString();
+    v4.value = RoomComponent.room.type;
+    v5.value = RoomComponent.room.description;
   }
-  startValues(key,value): void{
-    let   v =  window.document.getElementById(key+'-input-room') as HTMLInputElement;
-    v.value=value.toString();
-  }
-  clickButton() : void {
-    console.log('entrou')
-    RoomEditComponent.room.BuildingID=RoomComponent.room.building;
-    RoomEditComponent.room.Description=RoomComponent.room.description;
-    RoomEditComponent.room.MaxCapacity=RoomComponent.room.capacity;
-    RoomEditComponent.room.Number=RoomComponent.room.Number;
-    RoomEditComponent.room.Type=RoomComponent.room.type;
+  editRoom() {
+    console.log(RoomComponent.room);
+    RoomEditComponent.room._id = RoomComponent.room._id;
+    RoomEditComponent.room.buildingID = RoomComponent.room.buildingID;
+    RoomEditComponent.room.description = RoomComponent.room.description;
+    RoomEditComponent.room.maxCapacity = RoomComponent.room.maxCapacity;
+    RoomEditComponent.room.number = RoomComponent.room.number;
+    RoomEditComponent.room.type = RoomComponent.room.type;
+
     this.router
-      .navigateByUrl('room_edit');
+      .navigateByUrl('room_edit', { state: { id: 1 } })
+      .then((r) => null);
   }
 }

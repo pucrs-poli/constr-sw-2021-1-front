@@ -1,37 +1,58 @@
-import { HttpClient } from "@angular/common/http";
-import { building } from "./types";
+import { HttpClient } from '@angular/common/http';
+import { building, room } from './types';
 
-export class api{
-static buildings : building[]
- static apiURL = 'http://ec2-3-141-6-156.us-east-2.compute.amazonaws.com/api/';
- static getAllBuilding(http:HttpClient){
+export class api {
+  static apiURL = 'http://ec2-3-141-6-156.us-east-2.compute.amazonaws.com/api/';
 
- http.get(`${api.apiURL}buildings/all`).subscribe((result: any) => {
-      console.log(result);
-      this.buildings= result;
-     });
+  //BUILDINGS
+  static buildings: building[];
 
+  static getAllBuilding(http: HttpClient) {
+    http.get(`${api.apiURL}buildings/all`).subscribe((result: any) => {
+      //   console.log(result);
+      this.buildings = result;
+    });
   }
 
- static save(http:HttpClient, building:{}) {
-    http.post(`${ api.apiURL }/buildings`, building)
+  static saveBuilding(http: HttpClient, building: {}) {
+    http.post(`${api.apiURL}/buildings`, building).subscribe((result: any) => {
+      location.reload();
+    });
+  }
+  static deleteBuilding(http: HttpClient, id: string) {
+    http.delete(`${api.apiURL}/buildings/${id}`).subscribe((result: any) => {
+      location.reload();
+    });
+  }
+  static updateBuilding(http: HttpClient, id: string, building: {}) {
+    http
+      .put(`${api.apiURL}/buildings/${id}`, building)
       .subscribe((result: any) => {
-           location.reload();
+        location.reload();
       });
-
   }
-  static delete(http:HttpClient,id:string){
-    http.delete(`${ api.apiURL }/buildings/${id}`)
-    .subscribe((result: any) => {
+
+  //ROOMS
+  static rooms: room[];
+
+  static getAllRooms(http: HttpClient) {
+    http.get(`${api.apiURL}rooms/all`).subscribe((result: any) => {
+      console.log(result);
+      this.rooms = result;
+    });
+  }
+
+  static saveRoom(http: HttpClient, room: {}) {
+    http.post(`${api.apiURL}rooms`, room).subscribe((result: any) => {
       location.reload();
- });
-
+    });
   }
-  static update(http:HttpClient,id:string, building:{}){
-    http.put(`${ api.apiURL }/buildings/${id}`,building)
-    .subscribe((result: any) => {
+  static deleteRoom(http: HttpClient, id: string) {
+    http.delete(`${api.apiURL}rooms/${id}`).subscribe((result: any) => {});
+  }
+  static updateRoom(http: HttpClient, id: string, room: {}) {
+    http.put(`${api.apiURL}rooms/${id}`, room).subscribe((result: any) => {
       location.reload();
- });
+    });
   }
-
 }
