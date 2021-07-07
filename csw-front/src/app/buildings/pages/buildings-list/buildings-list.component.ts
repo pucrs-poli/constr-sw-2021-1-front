@@ -1,5 +1,5 @@
 import { HttpClient } from '@angular/common/http';
-import { AfterViewInit, Component, OnInit, ViewChild } from '@angular/core';
+import { AfterViewInit, ChangeDetectorRef, Component, OnInit, ViewChild } from '@angular/core';
 import { MatList } from '@angular/material/list';
 import { Router } from '@angular/router';
 import { api } from '../../api';
@@ -12,29 +12,29 @@ import { building } from '../../types';
 })
 export class BuildingsListComponent implements AfterViewInit, OnInit {
   // @ViewChild(MatList) table: MatTable<BuildingsListItem>;
-  names: string[]= [] ;
-  constructor(protected router: Router, public http: HttpClient) {}
+//  names: string[]= ['teste'] ;
+buildings: {id,name,capacity,type}[] ;
+
+  constructor(protected router: Router, public http: HttpClient,public ref: ChangeDetectorRef) {
+    api.getAllBuilding(this.http);
+    setTimeout(() => {
+      this.getBuildings()
+      ref.detectChanges();
+    }, 700);
+
+  }
 
   ngOnInit() {
-    api.getAllBuilding(this.http);
-    setTimeout(this.getBuildings, 500);
+
   }
   getBuildings() {
-    var a : string[] = [];
+    this.buildings = new Array<{id,name,capacity,type}>();
     api.buildings.forEach(element => {
-      a.push(element.name);
+      this.buildings.push({id:element._id, name:element.name,capacity: element.maxCapacity,type:element.description});
     });
 
+console.log(this.buildings)
 
-      this.names=a;
-      console.log(this.names)
-      /*]
-   api.buildings.forEach(element => {
-     var a : string;
-     a =  element.name as string
-    this.names.push("teste");
-    });
-*/
     }
 
   ngAfterViewInit() {}
@@ -51,7 +51,9 @@ export class BuildingsListComponent implements AfterViewInit, OnInit {
     this.router.navigateByUrl('edit', { state: { id: 1 } }).then((r) => null);
   }
 
-  deleteBuilding(event: Event) {
-    alert(`Você deletou Prédio 1.`);
+  deleteBuilding(event: Event, id: string, name: string) {
+    api.delete(this.http,id);
+    alert(name+" removido com sucesso");
+
   }
 }

@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { api } from '../../api';
 
 
@@ -10,26 +11,15 @@ import { api } from '../../api';
 })
 export class BuildingEditComponent implements OnInit {
 
-  value = 'teste';
-  building = {
-    id: 0,
-    name: '',
-    capacity: 0,
+
+static  building ={
     floors: 0,
-    description: '',
-  };
-  building2 ={
-    floors: 235,
-    name: "Prédio 125",
-    description: "Escola Politécnica da PUCRS",
-    maxCapacity: 3500
+    name: "",
+    description: "",
+    maxCapacity: 0
   }
-  constructor(public http: HttpClient) {
-    this.building.id = 0;
-    this.building.name = '';
-    this.building.capacity = 0;
-    this.building.floors = 0;
-    this.building.description = '';
+  constructor(public http: HttpClient,protected router: Router) {
+
   }
 
   ngOnInit(): void {
@@ -37,31 +27,27 @@ export class BuildingEditComponent implements OnInit {
   }
   changeName(event: Event): void {
     const element = event.currentTarget as HTMLInputElement;
-    this.building.name = element.value;
+    BuildingEditComponent.building.name = element.value;
   }
 
   changeCapacity(event: Event): void {
     const element = event.currentTarget as HTMLInputElement;
-    this.building.capacity = +element.value;
+    BuildingEditComponent.building.maxCapacity = +element.value;
   }
   changeFloors(event: Event): void {
     const element = event.currentTarget as HTMLInputElement;
-    this.building.floors = +element.value;
+    BuildingEditComponent.building.floors = +element.value;
   }
   changeDescription(event: Event): void {
     const element = event.currentTarget as HTMLInputElement;
-    this.building.description = element.value;
+    BuildingEditComponent.building.description = element.value;
   }
   clickButton() {
-    console.log(this.building);
+console.log(BuildingEditComponent.building)
+api.save(this.http,BuildingEditComponent.building);
+this.router.navigateByUrl('buildings').then((r) => null);
   }
-  clickButton2() {
-    //  api.getAllBuilding(this.http);
-  // api.save(this.http,this.building2);
- //   api.delete(this.http,'60e4eea01b094f0029814223');
-// api.update(this.http,'60e4e6901b094f00298141d9',this.building2);
 
-  }
 
 
   clear(type: string): void {
