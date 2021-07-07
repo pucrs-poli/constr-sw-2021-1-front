@@ -16,14 +16,29 @@ static  building ={
     floors: 0,
     name: "",
     description: "",
-    maxCapacity: 0
+    maxCapacity: 0,
+    id:""
   }
   constructor(public http: HttpClient,protected router: Router) {
 
   }
 
   ngOnInit(): void {
+  console.log(BuildingEditComponent.building)
+  this.startValues();
+  }
 
+
+  startValues(): void {
+    var v1 = document.getElementById('name-input') as HTMLInputElement;
+    var v2 = document.getElementById('capacity-input') as HTMLInputElement;
+    var v3 = document.getElementById('floor-input') as HTMLInputElement;
+    var v4 = document.getElementById('description-input') as HTMLInputElement;
+
+    v1.value= BuildingEditComponent.building.name;
+    v2.value= BuildingEditComponent.building.maxCapacity.toString();
+    v3.value= BuildingEditComponent.building.floors.toString();
+    v4.value= BuildingEditComponent.building.description;
   }
   changeName(event: Event): void {
     const element = event.currentTarget as HTMLInputElement;
@@ -43,11 +58,17 @@ static  building ={
     BuildingEditComponent.building.description = element.value;
   }
   clickButton() {
-console.log(BuildingEditComponent.building)
-api.save(this.http,BuildingEditComponent.building);
-this.router.navigateByUrl('buildings').then((r) => null);
-  }
 
+console.log(BuildingEditComponent.building)
+if (this.router.url=='/create'){
+  api.save(this.http,BuildingEditComponent.building);
+}else{
+  api.update(this.http,BuildingEditComponent.building.id,BuildingEditComponent.building)
+}
+
+this.router.navigateByUrl('buildings').then((r) => null);
+
+  }
 
 
   clear(type: string): void {
@@ -65,4 +86,6 @@ this.router.navigateByUrl('buildings').then((r) => null);
     }
     s.value = '';
   }
+
+
 }

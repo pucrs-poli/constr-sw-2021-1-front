@@ -17,15 +17,15 @@
   <mat-nav-list aria-label="Elements">
 
     <mat-list-item class="list-tile"  *ngFor="let building of buildings" >
-      <span (click)="showBuilding(item)" matLine class="list-primary-text">{{building.name}}</span>
-        <span (click)="showBuilding(item)" matLine class="list-secondary-text">
-        <span (click)="showBuilding(item)" matLine>Capacidade máxima: {{building.capacity}}.</span>
-        <span (click)="showBuilding(item)" matLine>Tipo: {{building.type}}</span>
+      <span (click)="showBuilding(building.id)" matLine class="list-primary-text">{{building.name}}</span>
+        <span (click)="showBuilding(building.id)" matLine class="list-secondary-text">
+        <span (click)="showBuilding(building.id)" matLine>Capacidade máxima: {{building.capacity}}.</span>
+        <span (click)="showBuilding(building.id)" matLine>Tipo: {{building.type}}</span>
       </span>
-      <button mat-icon-button class="edit-action" (click)="editBuilding(item)">
+      <button mat-icon-button class="edit-action" (click)="editBuilding(building.id)">
         <mat-icon>create</mat-icon>
       </button>
-      <button mat-icon-button class="delete-action" (click)="deleteBuilding($event,building.id,building.name)">
+      <button mat-icon-button class="delete-action" (click)="deleteBuilding(building.id,building.name)">
         <mat-icon>delete</mat-icon>
       </button>
       <mat-divider [inset]="true" class="list-divider"></mat-divider>
