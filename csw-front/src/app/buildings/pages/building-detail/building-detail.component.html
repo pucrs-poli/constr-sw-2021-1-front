@@ -1,25 +1,25 @@
 <div class="list-align">
   <div class="half-width">
     <span class="title-container">
-      <span class="title">
-        Prédio {{id}}
+      <span id="building-detail-title" building-detail class="title">
+
       </span>
     </span>
     <form>
       <div class="input">
         <mat-form-field appearance="fill">
           <mat-label>Capacidade máxima</mat-label>
-          <input id="capacity-input" matInput type="number" disabled value="200">
+          <input id="building-detail-capacity-input" matInput type="number" disabled>
         </mat-form-field>
         <mat-form-field class="sideInput" appearance="fill">
           <mat-label>Andar(es)</mat-label>
-          <input id="building-input" matInput disabled value="2" type="number">
+          <input id="building-detail-floors-input" matInput disabled type="number">
         </mat-form-field>
       </div>
       <div class="input">
         <mat-form-field appearance="fill">
           <mat-label>Descrição</mat-label>
-          <input id="description-input" matInput disabled value="Lorem ipsum dolor" type="text">
+          <input id="building-detail-description-input" matInput disabled type="text">
         </mat-form-field>
       </div>
 
@@ -32,16 +32,16 @@
 
     <mat-nav-list aria-label="Elements">
 
-      <mat-list-item class="list-tile" *ngFor="let room of rooms" (click)="showRoom(room)">
-        <span matLine class="list-primary-text">Sala {{room}}</span>
+      <mat-list-item class="list-tile" *ngFor="let room of rooms">
+        <span id="building-detail-room-number" matLine class="list-primary-text">Sala {{room.number}}</span>
         <span matLine class="list-secondary-text">
-          <span matLine>Capacidade máxima: x.</span>
-          <span matLine>Tipo: Aula</span>
+          <span (click)="showRoom(room.id)" matLine>Capacidade máxima: {{room.maxCapacity}}</span>
+          <span (click)="showRoom(room.id)" matLine>Tipo: {{room.type}}</span>
         </span>
-        <button mat-icon-button class="edit-action" (click)="editRoom(room)">
+        <button mat-icon-button class="edit-action" (click)="editRoom(room.id)">
           <mat-icon>create</mat-icon>
         </button>
-        <button mat-icon-button class="delete-action" (click)="deleteRoom($event)">
+        <button mat-icon-button class="delete-action" (click)="deleteRoom(room.id)">
           <mat-icon>delete</mat-icon>
         </button>
         <mat-divider [inset]="true" class="list-divider"></mat-divider>
@@ -52,12 +52,12 @@
   </div>
 </div>
 
-<button class="extended-fab-button second-fab" mat-fab color="primary">
+<button class="extended-fab-button second-fab" mat-fab color="primary" (click)="createRoom()">
   <mat-icon>add</mat-icon>
   <span class="extended-fab-button__text">Criar</span>
 </button>
 
-<button class="extended-fab-button" mat-fab color="primary">
+<button class="extended-fab-button" mat-fab color="primary" (click)="editBuilding()">
   <mat-icon>create</mat-icon>
   <span class="extended-fab-button__text">Edit</span>
 </button>

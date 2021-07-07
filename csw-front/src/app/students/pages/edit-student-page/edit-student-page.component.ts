@@ -13,8 +13,8 @@ export class EditStudentPageComponent implements OnInit {
   idStudent;
   student;
   readonly apiURL: string;
-  private studentForm: FormGroup;
-  private subscriptionForm: FormGroup;
+  studentForm: FormGroup;
+  subscriptionForm: FormGroup;
 
   constructor(private http: HttpClient, private location: Location, private activatedRoute: ActivatedRoute) {
     // tslint:disable-next-line:no-unused-expression

@@ -10,7 +10,7 @@ import {FormControl, FormGroup} from '@angular/forms';
 })
 export class CreateStudentPageComponent implements OnInit {
   readonly apiURL: string;
-  private studentForm: FormGroup;
+  studentForm: FormGroup;
 
   constructor(private http: HttpClient, private location: Location) {
     this.apiURL = 'http://ec2-54-94-166-37.sa-east-1.compute.amazonaws.com:8083/api';

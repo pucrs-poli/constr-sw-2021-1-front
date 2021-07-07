@@ -39,7 +39,7 @@ import { BuildingsModule} from './buildings/buildings.module';
     MatIconModule,
     MatTableModule,
     MatPaginatorModule,
-    MatNativeDateModule
+    MatNativeDateModule,
     MatSortModule,
     MatInputModule,
   ],
