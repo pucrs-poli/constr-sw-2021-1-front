@@ -1,6 +1,8 @@
+import { HttpClient } from '@angular/common/http';
 import { AfterViewInit, Component, OnInit, ViewChild } from '@angular/core';
 import {MatList} from '@angular/material/list';
 import {Router} from '@angular/router';
+import { api } from '../../api';
 
 @Component({
   selector: 'app-buildings-list',
@@ -10,25 +12,14 @@ import {Router} from '@angular/router';
 export class BuildingsListComponent implements AfterViewInit, OnInit {
   // @ViewChild(MatList) table: MatTable<BuildingsListItem>;
   items = [
-    '1',
-    '2',
-    '3',
-    '4',
-    '5',
-    '6',
-    '7',
-    '8',
-    '9',
-    '10',
-    '11',
-    '12',
-    '13',
-  ];
 
-  constructor(protected router: Router,
+  ] as [];
+
+  constructor(protected router: Router,public http: HttpClient
   ) {}
 
   ngOnInit() {
+    console.log(api.getAllBuilding(this.http));
   }
 
   ngAfterViewInit() {

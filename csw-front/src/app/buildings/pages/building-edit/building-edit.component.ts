@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
+import { api } from '../../api';
 
 
 @Component({
@@ -8,7 +9,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./building-edit.component.css'],
 })
 export class BuildingEditComponent implements OnInit {
-  apiURL = 'http://ec2-3-141-6-156.us-east-2.compute.amazonaws.com/api/';
+
   value = 'teste';
   building = {
     id: 0,
@@ -18,10 +19,10 @@ export class BuildingEditComponent implements OnInit {
     description: '',
   };
   building2 ={
-    floors: 15,
-    name: "Prédio 345",
+    floors: 235,
+    name: "Prédio 125",
     description: "Escola Politécnica da PUCRS",
-    maxCapacity: 2000
+    maxCapacity: 3500
   }
   constructor(public http: HttpClient) {
     this.building.id = 0;
@@ -32,7 +33,7 @@ export class BuildingEditComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.getAllBuilding();
+
   }
   changeName(event: Event): void {
     const element = event.currentTarget as HTMLInputElement;
@@ -55,38 +56,13 @@ export class BuildingEditComponent implements OnInit {
     console.log(this.building);
   }
   clickButton2() {
-   // this.save()
-  // this.getAllBuilding();
-  // this.delete('60e4e69e1b094f00298141dd');
-  this.update('60e4e6901b094f00298141d9');
-    //GET
-  }
-  getAllBuilding() {
-    console.log(`${this.apiURL}buildings/all`);
-    this.http.get(`${this.apiURL}buildings/all`).subscribe((result: any) => {
-      console.log(result);
-    });
-  }
-  save() {
-    this.http.post(`${ this.apiURL }/buildings`, this.building2)
-      .subscribe((result: any) => {
-           //location.reload();
-      });
-      this.getAllBuilding();
-  }
-  delete(id:string){
-    this.http.delete(`${ this.apiURL }/buildings/${id}`)
-    .subscribe((result: any) => {
-      location.reload();
- });
+    //  api.getAllBuilding(this.http);
+  // api.save(this.http,this.building2);
+ //   api.delete(this.http,'60e4eea01b094f0029814223');
+// api.update(this.http,'60e4e6901b094f00298141d9',this.building2);
 
   }
-  update(id:string){
-    this.http.put(`${ this.apiURL }/buildings/${id}`,this.building2)
-    .subscribe((result: any) => {
-      location.reload();
- });
-  }
+
 
   clear(type: string): void {
     let s;
