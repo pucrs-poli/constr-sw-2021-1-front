@@ -2,14 +2,15 @@ import { HttpClient } from "@angular/common/http";
 import { building } from "./types";
 
 export class api{
+static buildings : building[]
  static apiURL = 'http://ec2-3-141-6-156.us-east-2.compute.amazonaws.com/api/';
- static getAllBuilding(http:HttpClient): Promise<building[]> {
+ static getAllBuilding(http:HttpClient){
 
-    http.get(`${api.apiURL}buildings/all`).subscribe((result: any) => {
+ http.get(`${api.apiURL}buildings/all`).subscribe((result: any) => {
       console.log(result);
-      return result[0]
-    });
-    return null
+      this.buildings= result;
+     });
+
   }
 
  static save(http:HttpClient, building:{}) {

@@ -16,9 +16,9 @@
 
   <mat-nav-list aria-label="Elements">
 
-    <mat-list-item class="list-tile" *ngFor="let item of items" (click)="showBuilding(item)">
-      <span matLine class="list-primary-text">Prédio {{item}}</span>
-      <span matLine class="list-secondary-text">
+    <mat-list-item class="list-tile" *ngFor="let name of names" (click)="showBuilding(item)">
+      <span matLine class="list-primary-text">{{name}}</span>
+        <span matLine class="list-secondary-text">
         <span matLine>Capacidade máxima: x.</span>
         <span matLine>Tipo: Aula</span>
       </span>
