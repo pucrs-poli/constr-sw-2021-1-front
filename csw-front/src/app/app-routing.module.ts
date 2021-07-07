@@ -8,6 +8,10 @@ const routes: Routes = [
         loadChildren: () => import('./evaluations/evaluations.module').then(m => m.EvaluationsModule),
     },
     {
+        path: 'curricula',
+        loadChildren: () => import('./curricula-skill/curricula-skill.module').then(m => m.CurriculaSkillModule),
+    },
+    {
         path: 'home',
         component: HomeComponent,
     }
