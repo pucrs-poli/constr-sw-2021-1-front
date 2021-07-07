@@ -1,0 +1,91 @@
+.forms-titulo-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 16px;
+}
+
+.forms-icone {
+    color: #F18F01;
+    font-size: 35px;
+    margin-right: 1rem;
+}
+
+.forms-titulo {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 34px;
+    line-height: 36px;
+}
+
+.forms-subtitle {
+    font-size: 18px;
+    color: gray;
+    border-bottom-width: 0px;
+}
+
+.forms-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+}
+
+.mat-icon-button {
+    padding: none;
+}
+
+.mat-icon-add {
+    padding: 8px;
+    background: #F18F01;
+    border-radius: 5px;
+}
+
+.mat-icon-add:hover {
+    background: orange;
+    color: white;
+}
+
+.btn-cancel {
+    padding: 4px 8px;
+    color: #F18F01;
+    border: solid 1px #F18F01;
+    border-radius: 25px;
+}
+
+.btn-confirm {
+    padding: 5px 9px;
+    background: #F18F01;
+    border-radius: 25px;
+    margin-left: 16px;
+}
+
+.btn-cancel:hover {
+    color: orangered;
+    border-color: orangered;
+}
+
+.btn-confirm:hover {
+    background: orange;
+    color: white;
+}
+
+.questions {
+    margin-bottom: 8px;
+}
+
+::ng-deep .mat-form-field-wrapper {
+    margin-bottom: -1.25em;
+}
+
+.mat-form-field {
+    background-color: #EEF1EF;
+    border-radius: 5px;
+    padding: 4px;
+}
+
+.forms-options {
+    display: flex;
+    justify-content: space-between;
+    grid-template-columns: 1fr 1fr;
+    margin-bottom: 8px;
+}

@@ -16,8 +16,8 @@ export class EvaluationsService {
     return this.httpClient.get<TestModel[]>(`${this.baseUrl}/tests`);
   }
 
-  /* getApi(): Observable<any> {
-    const url = 'ec2-54-94-166-37.sa-east-1.compute.amazonaws.com:8083/api/students';
-    return this.httpClient.get<any>(url);
-  } */
+  postTest(test: TestModel): Observable<TestModel>{
+    console.log(test);
+    return this.httpClient.post<TestModel>(`${this.baseUrl}/tests`, test);
+  }
 }

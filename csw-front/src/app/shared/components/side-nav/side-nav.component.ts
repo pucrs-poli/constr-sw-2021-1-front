@@ -9,12 +9,12 @@ import { Router } from '@angular/router';
 export class SideNavComponent {
   @Input() showSideNav = false;
 
-  selectedButton: string = '';
+  selectedButton = '';
 
   constructor(protected router: Router){}
 
   onSelect(feature: string): void {
     this.selectedButton = feature;
-    this.router.navigate([`/${feature}`]);
+    this.router.navigate([`/${feature}`]).then(r => null);
   }
 }

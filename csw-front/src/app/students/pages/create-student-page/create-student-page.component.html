@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title></title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="">
+</head>
+
+<body>
+<div>
+  <div class="meio">
+
+    <div class="wrapper">
+      <div>
+        <h1 class="title">Criar Aluno</h1>
+      </div>
+      <div class="posicaodiv">
+        <form [formGroup]="studentForm" class="example-form">
+          <mat-form-field class="example-full-width" appearance="fill">
+            <mat-label>Nome</mat-label>
+            <input matInput formControlName="name" />
+          </mat-form-field>
+        </form>
+
+        <form [formGroup]="studentForm" class="example-form">
+          <mat-form-field class="example-full-width" appearance="fill">
+            <mat-label>CPF</mat-label>
+            <input matInput formControlName="cpf" />
+          </mat-form-field>
+        </form>
+
+        <form [formGroup]="studentForm" class="example-form">
+          <mat-form-field class="example-full-width" appearance="fill">
+            <mat-label>Data de Aniversário</mat-label>
+            <input matInput [matDatepicker]="picker" formControlName="birthDate">
+            <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+            <mat-datepicker #picker></mat-datepicker>
+          </mat-form-field>
+        </form>
+
+        <form [formGroup]="studentForm" class="example-form">
+          <mat-form-field class="example-full-width" appearance="fill">
+            <mat-label>Endereço</mat-label>
+            <input matInput formControlName="address" />
+          </mat-form-field>
+        </form>
+      </div>
+
+      <section>
+        <button mat-raised-button class="primary-button_resources" (click)="back()">Voltar</button>
+        <button mat-raised-button class="primary-button_resources" (click)="save()">Salvar</button>
+      </section>
+    </div>
+  </div>
+</div>
+
+<router-outlet></router-outlet>
+
+</body>
+
+</html>

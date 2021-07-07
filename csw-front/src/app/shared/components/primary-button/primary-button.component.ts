@@ -5,7 +5,7 @@ import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
   templateUrl: './primary-button.component.html',
   styleUrls: ['./primary-button.component.css']
 })
-export class PrimaryButtonComponent implements OnInit {
+export class PrimaryButtonComponent{
 
   @Input() text: string = '';
   @Input() icon: string = '';
@@ -14,7 +14,7 @@ export class PrimaryButtonComponent implements OnInit {
   
   constructor() { }
 
-  ngOnInit() {
+  onClick(){
     this.onClickedButton.emit();
   }
 }
