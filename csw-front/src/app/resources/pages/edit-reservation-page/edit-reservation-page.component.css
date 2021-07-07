@@ -2,7 +2,7 @@
   flex: 1 1 auto;
 }
 
-.meio{
+.center {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -19,7 +19,7 @@
   width: 100%;
 }
 
-.posicaodiv{
+.posicaodiv {
   width: 70%;
 }
 
